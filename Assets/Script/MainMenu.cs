@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using System.Collections;
+using AL.Monetization.CustomAdmobAds.Scripts;
 
 public class MainMenu : MonoBehaviour
 {
@@ -24,5 +25,9 @@ public class MainMenu : MonoBehaviour
     {
         // Load Level_8 scene
         SceneManager.LoadScene("Level_1");
+    }
+    public void ShowInterstitial()
+    {
+        AdManager.instance.ShowInterstitial(); // paste this line anywhere you want to show interstitial 
     }
 }
