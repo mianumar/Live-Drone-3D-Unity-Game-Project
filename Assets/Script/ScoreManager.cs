@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Collections; // Required for Coroutine
+using System.Collections;
+using AL.Monetization.CustomAdmobAds.Scripts;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -22,9 +23,11 @@ public class ScoreManager : MonoBehaviour
     public float healthDecreaseRate = 5f; 
     private int lives = 3; // Number of hearts/lives
     private bool isHealthDecreasing = true; // Flag to control health decrease
+    private bool isAdShown = false; // Flag to control Ad
 
     private void Awake()
     {
+        isAdShown = false ;
         if (instance == null)
         {
             instance = this;
@@ -37,6 +40,7 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
+        isAdShown = false;
         Time.timeScale = 1;
         UpdateScoreText();
         UpdateScoreSlider();
@@ -144,6 +148,7 @@ public class ScoreManager : MonoBehaviour
     {
         levelCompletePanel.SetActive(true);
         Time.timeScale = 0;
+        loadInterAd();
     }
 
     private void PlayerDead()
@@ -151,8 +156,17 @@ public class ScoreManager : MonoBehaviour
         deadPanel.SetActive(true);
         Time.timeScale = 0;
         Debug.Log("Player is dead");
+        loadInterAd();
     }
 
+    public void loadInterAd()
+    {
+        if (!isAdShown)
+        {
+            AdManager.instance.ShowInterstitial();
+            isAdShown = true;
+        }
+    }
     public void level1()
     {
         SceneManager.LoadScene("Level_1");
