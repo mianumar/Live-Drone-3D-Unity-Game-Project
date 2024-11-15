@@ -8120,6 +8120,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AdManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7070190825944867739, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
+      propertyPath: bannerToShow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070190825944867739, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
+      propertyPath: banners.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7070190825944867740, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
       propertyPath: m_RootOrder
       value: 6
