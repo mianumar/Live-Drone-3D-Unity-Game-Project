@@ -11,7 +11,7 @@ public class Bird : MonoBehaviour
 	public float amplitudeY;
 	public float amplitudeZ;
 	
-	private Animator anim;
+	[SerializeField] private Animator anim;
 	private bool     canChangeAnim;
 	private float    angleX;
 	private float    angleY;
@@ -21,7 +21,7 @@ public class Bird : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		anim = GetComponent<Animator>();
+		//anim = GetComponent<Animator>();
 		
 		angleX = Random.Range(0, 360);
 		angleY = Random.Range(0, 360);
@@ -29,11 +29,22 @@ public class Bird : MonoBehaviour
 		
 		lastPosition = GetNewPos();
 	}
-	
-	// Update is called once per frame
-	void OnAnimatorMove ()
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
+    void OnAnimatorMove ()
 	{
-		AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo(0);
+        if (anim == null)
+        {
+            Debug.LogError("Animator not found on Bird object.");
+            return;
+        }
+
+        AnimatorStateInfo state = anim.GetCurrentAnimatorStateInfo(0);
 	
 		if(state.IsTag("NewAnim"))
 		{
