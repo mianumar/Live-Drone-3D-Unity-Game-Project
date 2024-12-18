@@ -1,93 +1,247 @@
 fileFormatVersion: 2
 guid: ba3c67a6143a59847903f62b0231a507
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Cone
-    100002: Dumpstar
-    100004: Electric Box
-    100006: Fire Hydrant
-    100008: Mailbox
-    100010: News Box
-    100012: News Paper
-    100014: //RootNode
-    100016: Road Block A
-    100018: Road Block B
-    100020: Round Cone
-    100022: Trash
-    100024: Trash Bin
-    400000: Cone
-    400002: Dumpstar
-    400004: Electric Box
-    400006: Fire Hydrant
-    400008: Mailbox
-    400010: News Box
-    400012: News Paper
-    400014: //RootNode
-    400016: Road Block A
-    400018: Road Block B
-    400020: Round Cone
-    400022: Trash
-    400024: Trash Bin
-    2100000: 'Material #221'
-    2300000: Cone
-    2300002: Dumpstar
-    2300004: Electric Box
-    2300006: Fire Hydrant
-    2300008: Mailbox
-    2300010: News Box
-    2300012: News Paper
-    2300014: Road Block A
-    2300016: Road Block B
-    2300018: Round Cone
-    2300020: Trash
-    2300022: Trash Bin
-    3300000: Cone
-    3300002: Dumpstar
-    3300004: Electric Box
-    3300006: Fire Hydrant
-    3300008: Mailbox
-    3300010: News Box
-    3300012: News Paper
-    3300014: Road Block A
-    3300016: Road Block B
-    3300018: Round Cone
-    3300020: Trash
-    3300022: Trash Bin
-    4300000: Trash
-    4300002: Dumpstar
-    4300004: Fire Hydrant
-    4300006: Mailbox
-    4300008: Road Block A
-    4300010: Electric Box
-    4300012: Road Block B
-    4300014: News Box
-    4300016: News Paper
-    4300018: Trash Bin
-    4300020: Cone
-    4300022: Round Cone
-    6400000: Cone
-    6400002: Dumpstar
-    6400004: Electric Box
-    6400006: Fire Hydrant
-    6400008: Mailbox
-    6400010: News Box
-    6400012: News Paper
-    6400014: Road Block A
-    6400016: Road Block B
-    6400018: Round Cone
-    6400020: Trash
-    6400022: Trash Bin
-    7400000: Take 001
-    9500000: //RootNode
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Cone
+  - first:
+      1: 100002
+    second: Dumpstar
+  - first:
+      1: 100004
+    second: Electric Box
+  - first:
+      1: 100006
+    second: Fire Hydrant
+  - first:
+      1: 100008
+    second: Mailbox
+  - first:
+      1: 100010
+    second: News Box
+  - first:
+      1: 100012
+    second: News Paper
+  - first:
+      1: 100014
+    second: //RootNode
+  - first:
+      1: 100016
+    second: Road Block A
+  - first:
+      1: 100018
+    second: Road Block B
+  - first:
+      1: 100020
+    second: Round Cone
+  - first:
+      1: 100022
+    second: Trash
+  - first:
+      1: 100024
+    second: Trash Bin
+  - first:
+      4: 400000
+    second: Cone
+  - first:
+      4: 400002
+    second: Dumpstar
+  - first:
+      4: 400004
+    second: Electric Box
+  - first:
+      4: 400006
+    second: Fire Hydrant
+  - first:
+      4: 400008
+    second: Mailbox
+  - first:
+      4: 400010
+    second: News Box
+  - first:
+      4: 400012
+    second: News Paper
+  - first:
+      4: 400014
+    second: //RootNode
+  - first:
+      4: 400016
+    second: Road Block A
+  - first:
+      4: 400018
+    second: Road Block B
+  - first:
+      4: 400020
+    second: Round Cone
+  - first:
+      4: 400022
+    second: Trash
+  - first:
+      4: 400024
+    second: Trash Bin
+  - first:
+      21: 2100000
+    second: Material #221
+  - first:
+      23: 2300000
+    second: Cone
+  - first:
+      23: 2300002
+    second: Dumpstar
+  - first:
+      23: 2300004
+    second: Electric Box
+  - first:
+      23: 2300006
+    second: Fire Hydrant
+  - first:
+      23: 2300008
+    second: Mailbox
+  - first:
+      23: 2300010
+    second: News Box
+  - first:
+      23: 2300012
+    second: News Paper
+  - first:
+      23: 2300014
+    second: Road Block A
+  - first:
+      23: 2300016
+    second: Road Block B
+  - first:
+      23: 2300018
+    second: Round Cone
+  - first:
+      23: 2300020
+    second: Trash
+  - first:
+      23: 2300022
+    second: Trash Bin
+  - first:
+      33: 3300000
+    second: Cone
+  - first:
+      33: 3300002
+    second: Dumpstar
+  - first:
+      33: 3300004
+    second: Electric Box
+  - first:
+      33: 3300006
+    second: Fire Hydrant
+  - first:
+      33: 3300008
+    second: Mailbox
+  - first:
+      33: 3300010
+    second: News Box
+  - first:
+      33: 3300012
+    second: News Paper
+  - first:
+      33: 3300014
+    second: Road Block A
+  - first:
+      33: 3300016
+    second: Road Block B
+  - first:
+      33: 3300018
+    second: Round Cone
+  - first:
+      33: 3300020
+    second: Trash
+  - first:
+      33: 3300022
+    second: Trash Bin
+  - first:
+      43: 4300000
+    second: Trash
+  - first:
+      43: 4300002
+    second: Dumpstar
+  - first:
+      43: 4300004
+    second: Fire Hydrant
+  - first:
+      43: 4300006
+    second: Mailbox
+  - first:
+      43: 4300008
+    second: Road Block A
+  - first:
+      43: 4300010
+    second: Electric Box
+  - first:
+      43: 4300012
+    second: Road Block B
+  - first:
+      43: 4300014
+    second: News Box
+  - first:
+      43: 4300016
+    second: News Paper
+  - first:
+      43: 4300018
+    second: Trash Bin
+  - first:
+      43: 4300020
+    second: Cone
+  - first:
+      43: 4300022
+    second: Round Cone
+  - first:
+      64: 6400000
+    second: Cone
+  - first:
+      64: 6400002
+    second: Dumpstar
+  - first:
+      64: 6400004
+    second: Electric Box
+  - first:
+      64: 6400006
+    second: Fire Hydrant
+  - first:
+      64: 6400008
+    second: Mailbox
+  - first:
+      64: 6400010
+    second: News Box
+  - first:
+      64: 6400012
+    second: News Paper
+  - first:
+      64: 6400014
+    second: Road Block A
+  - first:
+      64: 6400016
+    second: Road Block B
+  - first:
+      64: 6400018
+    second: Round Cone
+  - first:
+      64: 6400020
+    second: Trash
+  - first:
+      64: 6400022
+    second: Trash Bin
+  - first:
+      74: 7400000
+    second: Take 001
+  - first:
+      95: 9500000
+    second: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #221'
+      name: Material #221
     second: {fileID: 2100000, guid: 89c1504ec0f429b4291be1d6886dcc83, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -96,6 +250,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -117,28 +272,37 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 100
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 1
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.001
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 58
     normalImportMode: 1
@@ -147,10 +311,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 0
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -160,13 +324,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

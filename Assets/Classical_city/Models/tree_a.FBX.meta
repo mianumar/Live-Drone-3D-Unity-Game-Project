@@ -1,111 +1,291 @@
 fileFormatVersion: 2
 guid: 09535b58beb28e64d9f264d728013694
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Bark A
-    100002: Bark B
-    100004: Bark C
-    100006: Bark D
-    100008: Bark E
-    100010: Bush
-    100012: Grass A
-    100014: Grass B
-    100016: Grass C
-    100018: Leaf A
-    100020: Leaf B
-    100022: Leaf C
-    100024: Leaf D
-    100026: Leaf E
-    100028: //RootNode
-    400000: Bark A
-    400002: Bark B
-    400004: Bark C
-    400006: Bark D
-    400008: Bark E
-    400010: Bush
-    400012: Grass A
-    400014: Grass B
-    400016: Grass C
-    400018: Leaf A
-    400020: Leaf B
-    400022: Leaf C
-    400024: Leaf D
-    400026: Leaf E
-    400028: //RootNode
-    2100000: 'Material #452'
-    2100002: 'Material #451'
-    2300000: Bark A
-    2300002: Bark B
-    2300004: Bark C
-    2300006: Bark D
-    2300008: Bark E
-    2300010: Bush
-    2300012: Grass A
-    2300014: Grass B
-    2300016: Grass C
-    2300018: Leaf A
-    2300020: Leaf B
-    2300022: Leaf C
-    2300024: Leaf D
-    2300026: Leaf E
-    3300000: Bark A
-    3300002: Bark B
-    3300004: Bark C
-    3300006: Bark D
-    3300008: Bark E
-    3300010: Bush
-    3300012: Grass A
-    3300014: Grass B
-    3300016: Grass C
-    3300018: Leaf A
-    3300020: Leaf B
-    3300022: Leaf C
-    3300024: Leaf D
-    3300026: Leaf E
-    4300000: Leaf B
-    4300002: Leaf A
-    4300004: Leaf E
-    4300006: Leaf C
-    4300008: Leaf D
-    4300010: Grass B
-    4300012: Grass A
-    4300014: Grass C
-    4300016: Bark C
-    4300018: Bark A
-    4300020: Bark B
-    4300022: Bark D
-    4300024: Bark E
-    4300026: Bush
-    6400000: Bark A
-    6400002: Bark B
-    6400004: Bark C
-    6400006: Bark D
-    6400008: Bark E
-    6400010: Bush
-    6400012: Grass A
-    6400014: Grass B
-    6400016: Grass C
-    6400018: Leaf A
-    6400020: Leaf B
-    6400022: Leaf C
-    6400024: Leaf D
-    6400026: Leaf E
-    7400000: Take 001
-    9500000: //RootNode
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Bark A
+  - first:
+      1: 100002
+    second: Bark B
+  - first:
+      1: 100004
+    second: Bark C
+  - first:
+      1: 100006
+    second: Bark D
+  - first:
+      1: 100008
+    second: Bark E
+  - first:
+      1: 100010
+    second: Bush
+  - first:
+      1: 100012
+    second: Grass A
+  - first:
+      1: 100014
+    second: Grass B
+  - first:
+      1: 100016
+    second: Grass C
+  - first:
+      1: 100018
+    second: Leaf A
+  - first:
+      1: 100020
+    second: Leaf B
+  - first:
+      1: 100022
+    second: Leaf C
+  - first:
+      1: 100024
+    second: Leaf D
+  - first:
+      1: 100026
+    second: Leaf E
+  - first:
+      1: 100028
+    second: //RootNode
+  - first:
+      4: 400000
+    second: Bark A
+  - first:
+      4: 400002
+    second: Bark B
+  - first:
+      4: 400004
+    second: Bark C
+  - first:
+      4: 400006
+    second: Bark D
+  - first:
+      4: 400008
+    second: Bark E
+  - first:
+      4: 400010
+    second: Bush
+  - first:
+      4: 400012
+    second: Grass A
+  - first:
+      4: 400014
+    second: Grass B
+  - first:
+      4: 400016
+    second: Grass C
+  - first:
+      4: 400018
+    second: Leaf A
+  - first:
+      4: 400020
+    second: Leaf B
+  - first:
+      4: 400022
+    second: Leaf C
+  - first:
+      4: 400024
+    second: Leaf D
+  - first:
+      4: 400026
+    second: Leaf E
+  - first:
+      4: 400028
+    second: //RootNode
+  - first:
+      21: 2100000
+    second: Material #452
+  - first:
+      21: 2100002
+    second: Material #451
+  - first:
+      23: 2300000
+    second: Bark A
+  - first:
+      23: 2300002
+    second: Bark B
+  - first:
+      23: 2300004
+    second: Bark C
+  - first:
+      23: 2300006
+    second: Bark D
+  - first:
+      23: 2300008
+    second: Bark E
+  - first:
+      23: 2300010
+    second: Bush
+  - first:
+      23: 2300012
+    second: Grass A
+  - first:
+      23: 2300014
+    second: Grass B
+  - first:
+      23: 2300016
+    second: Grass C
+  - first:
+      23: 2300018
+    second: Leaf A
+  - first:
+      23: 2300020
+    second: Leaf B
+  - first:
+      23: 2300022
+    second: Leaf C
+  - first:
+      23: 2300024
+    second: Leaf D
+  - first:
+      23: 2300026
+    second: Leaf E
+  - first:
+      33: 3300000
+    second: Bark A
+  - first:
+      33: 3300002
+    second: Bark B
+  - first:
+      33: 3300004
+    second: Bark C
+  - first:
+      33: 3300006
+    second: Bark D
+  - first:
+      33: 3300008
+    second: Bark E
+  - first:
+      33: 3300010
+    second: Bush
+  - first:
+      33: 3300012
+    second: Grass A
+  - first:
+      33: 3300014
+    second: Grass B
+  - first:
+      33: 3300016
+    second: Grass C
+  - first:
+      33: 3300018
+    second: Leaf A
+  - first:
+      33: 3300020
+    second: Leaf B
+  - first:
+      33: 3300022
+    second: Leaf C
+  - first:
+      33: 3300024
+    second: Leaf D
+  - first:
+      33: 3300026
+    second: Leaf E
+  - first:
+      43: 4300000
+    second: Leaf B
+  - first:
+      43: 4300002
+    second: Leaf A
+  - first:
+      43: 4300004
+    second: Leaf E
+  - first:
+      43: 4300006
+    second: Leaf C
+  - first:
+      43: 4300008
+    second: Leaf D
+  - first:
+      43: 4300010
+    second: Grass B
+  - first:
+      43: 4300012
+    second: Grass A
+  - first:
+      43: 4300014
+    second: Grass C
+  - first:
+      43: 4300016
+    second: Bark C
+  - first:
+      43: 4300018
+    second: Bark A
+  - first:
+      43: 4300020
+    second: Bark B
+  - first:
+      43: 4300022
+    second: Bark D
+  - first:
+      43: 4300024
+    second: Bark E
+  - first:
+      43: 4300026
+    second: Bush
+  - first:
+      64: 6400000
+    second: Bark A
+  - first:
+      64: 6400002
+    second: Bark B
+  - first:
+      64: 6400004
+    second: Bark C
+  - first:
+      64: 6400006
+    second: Bark D
+  - first:
+      64: 6400008
+    second: Bark E
+  - first:
+      64: 6400010
+    second: Bush
+  - first:
+      64: 6400012
+    second: Grass A
+  - first:
+      64: 6400014
+    second: Grass B
+  - first:
+      64: 6400016
+    second: Grass C
+  - first:
+      64: 6400018
+    second: Leaf A
+  - first:
+      64: 6400020
+    second: Leaf B
+  - first:
+      64: 6400022
+    second: Leaf C
+  - first:
+      64: 6400024
+    second: Leaf D
+  - first:
+      64: 6400026
+    second: Leaf E
+  - first:
+      74: 7400000
+    second: Take 001
+  - first:
+      95: 9500000
+    second: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #451'
+      name: Material #451
     second: {fileID: 2100000, guid: 1d9b155eac94dd742a5debbcc9bf0c78, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #452'
+      name: Material #452
     second: {fileID: 2100000, guid: 48e49feac70d3714d827dcccf5c2c78f, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -114,6 +294,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -135,28 +316,37 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 100
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 1
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.001
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 58
     normalImportMode: 1
@@ -165,10 +355,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 0
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -178,13 +368,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

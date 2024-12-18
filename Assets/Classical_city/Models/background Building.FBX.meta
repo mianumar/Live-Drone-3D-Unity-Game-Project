@@ -1,99 +1,265 @@
 fileFormatVersion: 2
 guid: 71a6e6192c689ad438892b12b9a20697
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Background A
-    100002: Background B
-    100004: //RootNode
-    100006: Background C
-    100008: Background D
-    100010: Background E
-    100012: Background F
-    100014: Background G
-    100016: Background H
-    100018: Background I
-    100020: Background J
-    100022: Background K
-    100024: Background L
-    100026: Background Long
-    400000: Background A
-    400002: Background B
-    400004: //RootNode
-    400006: Background C
-    400008: Background D
-    400010: Background E
-    400012: Background F
-    400014: Background G
-    400016: Background H
-    400018: Background I
-    400020: Background J
-    400022: Background K
-    400024: Background L
-    400026: Background Long
-    2100000: 'Material #213'
-    2300000: Background A
-    2300002: Background B
-    2300004: Background C
-    2300006: Background D
-    2300008: Background E
-    2300010: Background F
-    2300012: Background G
-    2300014: Background H
-    2300016: Background I
-    2300018: Background J
-    2300020: Background K
-    2300022: Background L
-    2300024: Background Long
-    3300000: Background A
-    3300002: Background B
-    3300004: Background C
-    3300006: Background D
-    3300008: Background E
-    3300010: Background F
-    3300012: Background G
-    3300014: Background H
-    3300016: Background I
-    3300018: Background J
-    3300020: Background K
-    3300022: Background L
-    3300024: Background Long
-    4300000: Background J
-    4300002: Background I
-    4300004: Background K
-    4300006: Background F
-    4300008: Background C
-    4300010: Background B
-    4300012: Background E
-    4300014: Background G
-    4300016: Background D
-    4300018: Background A
-    4300020: Background H
-    4300022: Background Long
-    4300024: Background L
-    6400000: Background A
-    6400002: Background B
-    6400004: Background C
-    6400006: Background D
-    6400008: Background E
-    6400010: Background F
-    6400012: Background G
-    6400014: Background H
-    6400016: Background I
-    6400018: Background J
-    6400020: Background K
-    6400022: Background L
-    6400024: Background Long
-    7400000: Take 001
-    9500000: //RootNode
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Background A
+  - first:
+      1: 100002
+    second: Background B
+  - first:
+      1: 100004
+    second: //RootNode
+  - first:
+      1: 100006
+    second: Background C
+  - first:
+      1: 100008
+    second: Background D
+  - first:
+      1: 100010
+    second: Background E
+  - first:
+      1: 100012
+    second: Background F
+  - first:
+      1: 100014
+    second: Background G
+  - first:
+      1: 100016
+    second: Background H
+  - first:
+      1: 100018
+    second: Background I
+  - first:
+      1: 100020
+    second: Background J
+  - first:
+      1: 100022
+    second: Background K
+  - first:
+      1: 100024
+    second: Background L
+  - first:
+      1: 100026
+    second: Background Long
+  - first:
+      4: 400000
+    second: Background A
+  - first:
+      4: 400002
+    second: Background B
+  - first:
+      4: 400004
+    second: //RootNode
+  - first:
+      4: 400006
+    second: Background C
+  - first:
+      4: 400008
+    second: Background D
+  - first:
+      4: 400010
+    second: Background E
+  - first:
+      4: 400012
+    second: Background F
+  - first:
+      4: 400014
+    second: Background G
+  - first:
+      4: 400016
+    second: Background H
+  - first:
+      4: 400018
+    second: Background I
+  - first:
+      4: 400020
+    second: Background J
+  - first:
+      4: 400022
+    second: Background K
+  - first:
+      4: 400024
+    second: Background L
+  - first:
+      4: 400026
+    second: Background Long
+  - first:
+      21: 2100000
+    second: Material #213
+  - first:
+      23: 2300000
+    second: Background A
+  - first:
+      23: 2300002
+    second: Background B
+  - first:
+      23: 2300004
+    second: Background C
+  - first:
+      23: 2300006
+    second: Background D
+  - first:
+      23: 2300008
+    second: Background E
+  - first:
+      23: 2300010
+    second: Background F
+  - first:
+      23: 2300012
+    second: Background G
+  - first:
+      23: 2300014
+    second: Background H
+  - first:
+      23: 2300016
+    second: Background I
+  - first:
+      23: 2300018
+    second: Background J
+  - first:
+      23: 2300020
+    second: Background K
+  - first:
+      23: 2300022
+    second: Background L
+  - first:
+      23: 2300024
+    second: Background Long
+  - first:
+      33: 3300000
+    second: Background A
+  - first:
+      33: 3300002
+    second: Background B
+  - first:
+      33: 3300004
+    second: Background C
+  - first:
+      33: 3300006
+    second: Background D
+  - first:
+      33: 3300008
+    second: Background E
+  - first:
+      33: 3300010
+    second: Background F
+  - first:
+      33: 3300012
+    second: Background G
+  - first:
+      33: 3300014
+    second: Background H
+  - first:
+      33: 3300016
+    second: Background I
+  - first:
+      33: 3300018
+    second: Background J
+  - first:
+      33: 3300020
+    second: Background K
+  - first:
+      33: 3300022
+    second: Background L
+  - first:
+      33: 3300024
+    second: Background Long
+  - first:
+      43: 4300000
+    second: Background J
+  - first:
+      43: 4300002
+    second: Background I
+  - first:
+      43: 4300004
+    second: Background K
+  - first:
+      43: 4300006
+    second: Background F
+  - first:
+      43: 4300008
+    second: Background C
+  - first:
+      43: 4300010
+    second: Background B
+  - first:
+      43: 4300012
+    second: Background E
+  - first:
+      43: 4300014
+    second: Background G
+  - first:
+      43: 4300016
+    second: Background D
+  - first:
+      43: 4300018
+    second: Background A
+  - first:
+      43: 4300020
+    second: Background H
+  - first:
+      43: 4300022
+    second: Background Long
+  - first:
+      43: 4300024
+    second: Background L
+  - first:
+      64: 6400000
+    second: Background A
+  - first:
+      64: 6400002
+    second: Background B
+  - first:
+      64: 6400004
+    second: Background C
+  - first:
+      64: 6400006
+    second: Background D
+  - first:
+      64: 6400008
+    second: Background E
+  - first:
+      64: 6400010
+    second: Background F
+  - first:
+      64: 6400012
+    second: Background G
+  - first:
+      64: 6400014
+    second: Background H
+  - first:
+      64: 6400016
+    second: Background I
+  - first:
+      64: 6400018
+    second: Background J
+  - first:
+      64: 6400020
+    second: Background K
+  - first:
+      64: 6400022
+    second: Background L
+  - first:
+      64: 6400024
+    second: Background Long
+  - first:
+      74: 7400000
+    second: Take 001
+  - first:
+      95: 9500000
+    second: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #213'
+      name: Material #213
     second: {fileID: 2100000, guid: 3f5f09875ab3e9b4c8b47357d5379b50, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -102,6 +268,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -123,28 +290,37 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 100
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 1
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.001
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 58
     normalImportMode: 1
@@ -153,10 +329,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 0
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -166,13 +342,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -1,189 +1,535 @@
 fileFormatVersion: 2
 guid: 29fd0deefc3cff347a4cfd91473b20ac
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Airconditioner
-    100002: Barrier Black
-    100004: Barrier yellow
-    100006: Bench A
-    100008: Bench B
-    100010: Bus Stand
-    100012: Chair
-    100014: Chemney
-    100016: Drain Pipe
-    100018: Flower Tob
-    100020: Food Menu
-    100022: Fountain
-    100024: ground_light
-    100026: Hedge Tob
-    100028: Paper Box
-    100030: //RootNode
-    100032: Road Barrier Black
-    100034: Road Barrier Blue
-    100036: Road Pole A
-    100038: Road Pole B
-    100040: Shader_yellow
-    100042: Statue
-    100044: Street Lamp
-    100046: Street Light
-    100048: Table_res
-    100050: Tob A
-    100052: Traffic Signal
-    100054: Tree Bed
-    100056: Water Tank
-    400000: Airconditioner
-    400002: Barrier Black
-    400004: Barrier yellow
-    400006: Bench A
-    400008: Bench B
-    400010: Bus Stand
-    400012: Chair
-    400014: Chemney
-    400016: Drain Pipe
-    400018: Flower Tob
-    400020: Food Menu
-    400022: Fountain
-    400024: ground_light
-    400026: Hedge Tob
-    400028: Paper Box
-    400030: //RootNode
-    400032: Road Barrier Black
-    400034: Road Barrier Blue
-    400036: Road Pole A
-    400038: Road Pole B
-    400040: Shader_yellow
-    400042: Statue
-    400044: Street Lamp
-    400046: Street Light
-    400048: Table_res
-    400050: Tob A
-    400052: Traffic Signal
-    400054: Tree Bed
-    400056: Water Tank
-    2100000: 'Material #222'
-    2300000: Airconditioner
-    2300002: Barrier Black
-    2300004: Barrier yellow
-    2300006: Bench A
-    2300008: Bench B
-    2300010: Bus Stand
-    2300012: Chair
-    2300014: Chemney
-    2300016: Drain Pipe
-    2300018: Flower Tob
-    2300020: Food Menu
-    2300022: Fountain
-    2300024: ground_light
-    2300026: Hedge Tob
-    2300028: Paper Box
-    2300030: Road Barrier Black
-    2300032: Road Barrier Blue
-    2300034: Road Pole A
-    2300036: Road Pole B
-    2300038: Shader_yellow
-    2300040: Statue
-    2300042: Street Lamp
-    2300044: Street Light
-    2300046: Table_res
-    2300048: Tob A
-    2300050: Traffic Signal
-    2300052: Tree Bed
-    2300054: Water Tank
-    3300000: Airconditioner
-    3300002: Barrier Black
-    3300004: Barrier yellow
-    3300006: Bench A
-    3300008: Bench B
-    3300010: Bus Stand
-    3300012: Chair
-    3300014: Chemney
-    3300016: Drain Pipe
-    3300018: Flower Tob
-    3300020: Food Menu
-    3300022: Fountain
-    3300024: ground_light
-    3300026: Hedge Tob
-    3300028: Paper Box
-    3300030: Road Barrier Black
-    3300032: Road Barrier Blue
-    3300034: Road Pole A
-    3300036: Road Pole B
-    3300038: Shader_yellow
-    3300040: Statue
-    3300042: Street Lamp
-    3300044: Street Light
-    3300046: Table_res
-    3300048: Tob A
-    3300050: Traffic Signal
-    3300052: Tree Bed
-    3300054: Water Tank
-    4300000: Shader_yellow
-    4300002: Bench A
-    4300004: Road Pole A
-    4300006: Chair
-    4300008: Table_res
-    4300010: Food Menu
-    4300012: Statue
-    4300014: Street Lamp
-    4300016: Road Barrier Black
-    4300018: Road Pole B
-    4300020: Bus Stand
-    4300022: Bench B
-    4300024: Tob A
-    4300026: Hedge Tob
-    4300028: Barrier yellow
-    4300030: Barrier Black
-    4300032: Street Light
-    4300034: Drain Pipe
-    4300036: Chemney
-    4300038: Water Tank
-    4300040: Airconditioner
-    4300042: Road Barrier Blue
-    4300044: Traffic Signal
-    4300046: Fountain
-    4300048: Paper Box
-    4300050: Flower Tob
-    4300052: Tree Bed
-    4300054: ground_light
-    6400000: Airconditioner
-    6400002: Barrier Black
-    6400004: Barrier yellow
-    6400006: Bench A
-    6400008: Bench B
-    6400010: Bus Stand
-    6400012: Chair
-    6400014: Chemney
-    6400016: Drain Pipe
-    6400018: Flower Tob
-    6400020: Food Menu
-    6400022: Fountain
-    6400024: ground_light
-    6400026: Hedge Tob
-    6400028: Paper Box
-    6400030: Road Barrier Black
-    6400032: Road Barrier Blue
-    6400034: Road Pole A
-    6400036: Road Pole B
-    6400038: Shader_yellow
-    6400040: Statue
-    6400042: Street Lamp
-    6400044: Street Light
-    6400046: Table_res
-    6400048: Tob A
-    6400050: Traffic Signal
-    6400052: Tree Bed
-    6400054: Water Tank
-    7400000: Take 001
-    9500000: //RootNode
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Airconditioner
+  - first:
+      1: 100002
+    second: Barrier Black
+  - first:
+      1: 100004
+    second: Barrier yellow
+  - first:
+      1: 100006
+    second: Bench A
+  - first:
+      1: 100008
+    second: Bench B
+  - first:
+      1: 100010
+    second: Bus Stand
+  - first:
+      1: 100012
+    second: Chair
+  - first:
+      1: 100014
+    second: Chemney
+  - first:
+      1: 100016
+    second: Drain Pipe
+  - first:
+      1: 100018
+    second: Flower Tob
+  - first:
+      1: 100020
+    second: Food Menu
+  - first:
+      1: 100022
+    second: Fountain
+  - first:
+      1: 100024
+    second: ground_light
+  - first:
+      1: 100026
+    second: Hedge Tob
+  - first:
+      1: 100028
+    second: Paper Box
+  - first:
+      1: 100030
+    second: //RootNode
+  - first:
+      1: 100032
+    second: Road Barrier Black
+  - first:
+      1: 100034
+    second: Road Barrier Blue
+  - first:
+      1: 100036
+    second: Road Pole A
+  - first:
+      1: 100038
+    second: Road Pole B
+  - first:
+      1: 100040
+    second: Shader_yellow
+  - first:
+      1: 100042
+    second: Statue
+  - first:
+      1: 100044
+    second: Street Lamp
+  - first:
+      1: 100046
+    second: Street Light
+  - first:
+      1: 100048
+    second: Table_res
+  - first:
+      1: 100050
+    second: Tob A
+  - first:
+      1: 100052
+    second: Traffic Signal
+  - first:
+      1: 100054
+    second: Tree Bed
+  - first:
+      1: 100056
+    second: Water Tank
+  - first:
+      4: 400000
+    second: Airconditioner
+  - first:
+      4: 400002
+    second: Barrier Black
+  - first:
+      4: 400004
+    second: Barrier yellow
+  - first:
+      4: 400006
+    second: Bench A
+  - first:
+      4: 400008
+    second: Bench B
+  - first:
+      4: 400010
+    second: Bus Stand
+  - first:
+      4: 400012
+    second: Chair
+  - first:
+      4: 400014
+    second: Chemney
+  - first:
+      4: 400016
+    second: Drain Pipe
+  - first:
+      4: 400018
+    second: Flower Tob
+  - first:
+      4: 400020
+    second: Food Menu
+  - first:
+      4: 400022
+    second: Fountain
+  - first:
+      4: 400024
+    second: ground_light
+  - first:
+      4: 400026
+    second: Hedge Tob
+  - first:
+      4: 400028
+    second: Paper Box
+  - first:
+      4: 400030
+    second: //RootNode
+  - first:
+      4: 400032
+    second: Road Barrier Black
+  - first:
+      4: 400034
+    second: Road Barrier Blue
+  - first:
+      4: 400036
+    second: Road Pole A
+  - first:
+      4: 400038
+    second: Road Pole B
+  - first:
+      4: 400040
+    second: Shader_yellow
+  - first:
+      4: 400042
+    second: Statue
+  - first:
+      4: 400044
+    second: Street Lamp
+  - first:
+      4: 400046
+    second: Street Light
+  - first:
+      4: 400048
+    second: Table_res
+  - first:
+      4: 400050
+    second: Tob A
+  - first:
+      4: 400052
+    second: Traffic Signal
+  - first:
+      4: 400054
+    second: Tree Bed
+  - first:
+      4: 400056
+    second: Water Tank
+  - first:
+      21: 2100000
+    second: Material #222
+  - first:
+      23: 2300000
+    second: Airconditioner
+  - first:
+      23: 2300002
+    second: Barrier Black
+  - first:
+      23: 2300004
+    second: Barrier yellow
+  - first:
+      23: 2300006
+    second: Bench A
+  - first:
+      23: 2300008
+    second: Bench B
+  - first:
+      23: 2300010
+    second: Bus Stand
+  - first:
+      23: 2300012
+    second: Chair
+  - first:
+      23: 2300014
+    second: Chemney
+  - first:
+      23: 2300016
+    second: Drain Pipe
+  - first:
+      23: 2300018
+    second: Flower Tob
+  - first:
+      23: 2300020
+    second: Food Menu
+  - first:
+      23: 2300022
+    second: Fountain
+  - first:
+      23: 2300024
+    second: ground_light
+  - first:
+      23: 2300026
+    second: Hedge Tob
+  - first:
+      23: 2300028
+    second: Paper Box
+  - first:
+      23: 2300030
+    second: Road Barrier Black
+  - first:
+      23: 2300032
+    second: Road Barrier Blue
+  - first:
+      23: 2300034
+    second: Road Pole A
+  - first:
+      23: 2300036
+    second: Road Pole B
+  - first:
+      23: 2300038
+    second: Shader_yellow
+  - first:
+      23: 2300040
+    second: Statue
+  - first:
+      23: 2300042
+    second: Street Lamp
+  - first:
+      23: 2300044
+    second: Street Light
+  - first:
+      23: 2300046
+    second: Table_res
+  - first:
+      23: 2300048
+    second: Tob A
+  - first:
+      23: 2300050
+    second: Traffic Signal
+  - first:
+      23: 2300052
+    second: Tree Bed
+  - first:
+      23: 2300054
+    second: Water Tank
+  - first:
+      33: 3300000
+    second: Airconditioner
+  - first:
+      33: 3300002
+    second: Barrier Black
+  - first:
+      33: 3300004
+    second: Barrier yellow
+  - first:
+      33: 3300006
+    second: Bench A
+  - first:
+      33: 3300008
+    second: Bench B
+  - first:
+      33: 3300010
+    second: Bus Stand
+  - first:
+      33: 3300012
+    second: Chair
+  - first:
+      33: 3300014
+    second: Chemney
+  - first:
+      33: 3300016
+    second: Drain Pipe
+  - first:
+      33: 3300018
+    second: Flower Tob
+  - first:
+      33: 3300020
+    second: Food Menu
+  - first:
+      33: 3300022
+    second: Fountain
+  - first:
+      33: 3300024
+    second: ground_light
+  - first:
+      33: 3300026
+    second: Hedge Tob
+  - first:
+      33: 3300028
+    second: Paper Box
+  - first:
+      33: 3300030
+    second: Road Barrier Black
+  - first:
+      33: 3300032
+    second: Road Barrier Blue
+  - first:
+      33: 3300034
+    second: Road Pole A
+  - first:
+      33: 3300036
+    second: Road Pole B
+  - first:
+      33: 3300038
+    second: Shader_yellow
+  - first:
+      33: 3300040
+    second: Statue
+  - first:
+      33: 3300042
+    second: Street Lamp
+  - first:
+      33: 3300044
+    second: Street Light
+  - first:
+      33: 3300046
+    second: Table_res
+  - first:
+      33: 3300048
+    second: Tob A
+  - first:
+      33: 3300050
+    second: Traffic Signal
+  - first:
+      33: 3300052
+    second: Tree Bed
+  - first:
+      33: 3300054
+    second: Water Tank
+  - first:
+      43: 4300000
+    second: Shader_yellow
+  - first:
+      43: 4300002
+    second: Bench A
+  - first:
+      43: 4300004
+    second: Road Pole A
+  - first:
+      43: 4300006
+    second: Chair
+  - first:
+      43: 4300008
+    second: Table_res
+  - first:
+      43: 4300010
+    second: Food Menu
+  - first:
+      43: 4300012
+    second: Statue
+  - first:
+      43: 4300014
+    second: Street Lamp
+  - first:
+      43: 4300016
+    second: Road Barrier Black
+  - first:
+      43: 4300018
+    second: Road Pole B
+  - first:
+      43: 4300020
+    second: Bus Stand
+  - first:
+      43: 4300022
+    second: Bench B
+  - first:
+      43: 4300024
+    second: Tob A
+  - first:
+      43: 4300026
+    second: Hedge Tob
+  - first:
+      43: 4300028
+    second: Barrier yellow
+  - first:
+      43: 4300030
+    second: Barrier Black
+  - first:
+      43: 4300032
+    second: Street Light
+  - first:
+      43: 4300034
+    second: Drain Pipe
+  - first:
+      43: 4300036
+    second: Chemney
+  - first:
+      43: 4300038
+    second: Water Tank
+  - first:
+      43: 4300040
+    second: Airconditioner
+  - first:
+      43: 4300042
+    second: Road Barrier Blue
+  - first:
+      43: 4300044
+    second: Traffic Signal
+  - first:
+      43: 4300046
+    second: Fountain
+  - first:
+      43: 4300048
+    second: Paper Box
+  - first:
+      43: 4300050
+    second: Flower Tob
+  - first:
+      43: 4300052
+    second: Tree Bed
+  - first:
+      43: 4300054
+    second: ground_light
+  - first:
+      64: 6400000
+    second: Airconditioner
+  - first:
+      64: 6400002
+    second: Barrier Black
+  - first:
+      64: 6400004
+    second: Barrier yellow
+  - first:
+      64: 6400006
+    second: Bench A
+  - first:
+      64: 6400008
+    second: Bench B
+  - first:
+      64: 6400010
+    second: Bus Stand
+  - first:
+      64: 6400012
+    second: Chair
+  - first:
+      64: 6400014
+    second: Chemney
+  - first:
+      64: 6400016
+    second: Drain Pipe
+  - first:
+      64: 6400018
+    second: Flower Tob
+  - first:
+      64: 6400020
+    second: Food Menu
+  - first:
+      64: 6400022
+    second: Fountain
+  - first:
+      64: 6400024
+    second: ground_light
+  - first:
+      64: 6400026
+    second: Hedge Tob
+  - first:
+      64: 6400028
+    second: Paper Box
+  - first:
+      64: 6400030
+    second: Road Barrier Black
+  - first:
+      64: 6400032
+    second: Road Barrier Blue
+  - first:
+      64: 6400034
+    second: Road Pole A
+  - first:
+      64: 6400036
+    second: Road Pole B
+  - first:
+      64: 6400038
+    second: Shader_yellow
+  - first:
+      64: 6400040
+    second: Statue
+  - first:
+      64: 6400042
+    second: Street Lamp
+  - first:
+      64: 6400044
+    second: Street Light
+  - first:
+      64: 6400046
+    second: Table_res
+  - first:
+      64: 6400048
+    second: Tob A
+  - first:
+      64: 6400050
+    second: Traffic Signal
+  - first:
+      64: 6400052
+    second: Tree Bed
+  - first:
+      64: 6400054
+    second: Water Tank
+  - first:
+      74: 7400000
+    second: Take 001
+  - first:
+      95: 9500000
+    second: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #222'
+      name: Material #222
     second: {fileID: 2100000, guid: 1d9b155eac94dd742a5debbcc9bf0c78, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -192,6 +538,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -213,28 +560,37 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 200
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 1
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.001
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 58
     normalImportMode: 1
@@ -243,10 +599,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 0
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -256,13 +612,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 200
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

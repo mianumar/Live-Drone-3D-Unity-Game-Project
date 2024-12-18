@@ -1,193 +1,495 @@
 fileFormatVersion: 2
 guid: 27587572e74cf4962a9ccedb11b3928d
-timeCreated: 1474273022
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: antt_low
-    100002: arch_low
-    100004: body_low
-    100006: bodydoor_low
-    100008: bodyp_low
-    100010: cfront_low
-    100012: conpart_low
-    100014: crear_low
-    100016: cyl_low
-    100018: cylin_low
-    100020: cylside_low
-    100022: doorpart_low
-    100024: //RootNode
-    100026: incover_low
-    100028: inncyl_low
-    100030: mec_low
-    100032: metalarms_low
-    100034: outbump_low
-    100036: partsenergy_low
-    100038: partsenergys_low
-    100040: prot_low
-    100042: prot_low 1
-    100044: rotorl_low
-    100046: rotorr_low
-    100048: sidedoor_low
-    100050: sidedoorh_low
-    100052: top_low
-    100054: wires_low
-    400000: antt_low
-    400002: arch_low
-    400004: body_low
-    400006: bodydoor_low
-    400008: bodyp_low
-    400010: cfront_low
-    400012: conpart_low
-    400014: crear_low
-    400016: cyl_low
-    400018: cylin_low
-    400020: cylside_low
-    400022: doorpart_low
-    400024: //RootNode
-    400026: incover_low
-    400028: inncyl_low
-    400030: mec_low
-    400032: metalarms_low
-    400034: outbump_low
-    400036: partsenergy_low
-    400038: partsenergys_low
-    400040: prot_low
-    400042: prot_low 1
-    400044: rotorl_low
-    400046: rotorr_low
-    400048: sidedoor_low
-    400050: sidedoorh_low
-    400052: top_low
-    400054: wires_low
-    2300000: antt_low
-    2300002: arch_low
-    2300004: body_low
-    2300006: bodydoor_low
-    2300008: bodyp_low
-    2300010: cfront_low
-    2300012: conpart_low
-    2300014: crear_low
-    2300016: cyl_low
-    2300018: cylin_low
-    2300020: cylside_low
-    2300022: doorpart_low
-    2300024: incover_low
-    2300026: inncyl_low
-    2300028: mec_low
-    2300030: metalarms_low
-    2300032: outbump_low
-    2300034: partsenergy_low
-    2300036: partsenergys_low
-    2300038: prot_low
-    2300040: prot_low 1
-    2300042: rotorl_low
-    2300044: rotorr_low
-    2300046: sidedoor_low
-    2300048: sidedoorh_low
-    2300050: top_low
-    2300052: wires_low
-    3300000: antt_low
-    3300002: arch_low
-    3300004: body_low
-    3300006: bodydoor_low
-    3300008: bodyp_low
-    3300010: cfront_low
-    3300012: conpart_low
-    3300014: crear_low
-    3300016: cyl_low
-    3300018: cylin_low
-    3300020: cylside_low
-    3300022: doorpart_low
-    3300024: incover_low
-    3300026: inncyl_low
-    3300028: mec_low
-    3300030: metalarms_low
-    3300032: outbump_low
-    3300034: partsenergy_low
-    3300036: partsenergys_low
-    3300038: prot_low
-    3300040: prot_low 1
-    3300042: rotorl_low
-    3300044: rotorr_low
-    3300046: sidedoor_low
-    3300048: sidedoorh_low
-    3300050: top_low
-    3300052: wires_low
-    4300000: body_low
-    4300002: cyl_low
-    4300004: antt_low
-    4300006: partsenergy_low
-    4300008: mec_low
-    4300010: bodyp_low
-    4300012: incover_low
-    4300014: top_low
-    4300016: cylin_low
-    4300018: wires_low
-    4300020: cylside_low
-    4300022: cfront_low
-    4300024: crear_low
-    4300026: bodydoor_low
-    4300028: sidedoor_low
-    4300030: sidedoorh_low
-    4300032: doorpart_low
-    4300034: prot_low
-    4300036: metalarms_low
-    4300038: outbump_low
-    4300040: conpart_low
-    4300042: inncyl_low
-    4300044: arch_low
-    4300046: partsenergys_low
-    4300048: prot_low
-    4300050: rotorr_low
-    4300052: rotorl_low
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: antt_low
+  - first:
+      1: 100002
+    second: arch_low
+  - first:
+      1: 100004
+    second: body_low
+  - first:
+      1: 100006
+    second: bodydoor_low
+  - first:
+      1: 100008
+    second: bodyp_low
+  - first:
+      1: 100010
+    second: cfront_low
+  - first:
+      1: 100012
+    second: conpart_low
+  - first:
+      1: 100014
+    second: crear_low
+  - first:
+      1: 100016
+    second: cyl_low
+  - first:
+      1: 100018
+    second: cylin_low
+  - first:
+      1: 100020
+    second: cylside_low
+  - first:
+      1: 100022
+    second: doorpart_low
+  - first:
+      1: 100024
+    second: //RootNode
+  - first:
+      1: 100026
+    second: incover_low
+  - first:
+      1: 100028
+    second: inncyl_low
+  - first:
+      1: 100030
+    second: mec_low
+  - first:
+      1: 100032
+    second: metalarms_low
+  - first:
+      1: 100034
+    second: outbump_low
+  - first:
+      1: 100036
+    second: partsenergy_low
+  - first:
+      1: 100038
+    second: partsenergys_low
+  - first:
+      1: 100040
+    second: prot_low
+  - first:
+      1: 100042
+    second: prot_low 1
+  - first:
+      1: 100044
+    second: rotorl_low
+  - first:
+      1: 100046
+    second: rotorr_low
+  - first:
+      1: 100048
+    second: sidedoor_low
+  - first:
+      1: 100050
+    second: sidedoorh_low
+  - first:
+      1: 100052
+    second: top_low
+  - first:
+      1: 100054
+    second: wires_low
+  - first:
+      4: 400000
+    second: antt_low
+  - first:
+      4: 400002
+    second: arch_low
+  - first:
+      4: 400004
+    second: body_low
+  - first:
+      4: 400006
+    second: bodydoor_low
+  - first:
+      4: 400008
+    second: bodyp_low
+  - first:
+      4: 400010
+    second: cfront_low
+  - first:
+      4: 400012
+    second: conpart_low
+  - first:
+      4: 400014
+    second: crear_low
+  - first:
+      4: 400016
+    second: cyl_low
+  - first:
+      4: 400018
+    second: cylin_low
+  - first:
+      4: 400020
+    second: cylside_low
+  - first:
+      4: 400022
+    second: doorpart_low
+  - first:
+      4: 400024
+    second: //RootNode
+  - first:
+      4: 400026
+    second: incover_low
+  - first:
+      4: 400028
+    second: inncyl_low
+  - first:
+      4: 400030
+    second: mec_low
+  - first:
+      4: 400032
+    second: metalarms_low
+  - first:
+      4: 400034
+    second: outbump_low
+  - first:
+      4: 400036
+    second: partsenergy_low
+  - first:
+      4: 400038
+    second: partsenergys_low
+  - first:
+      4: 400040
+    second: prot_low
+  - first:
+      4: 400042
+    second: prot_low 1
+  - first:
+      4: 400044
+    second: rotorl_low
+  - first:
+      4: 400046
+    second: rotorr_low
+  - first:
+      4: 400048
+    second: sidedoor_low
+  - first:
+      4: 400050
+    second: sidedoorh_low
+  - first:
+      4: 400052
+    second: top_low
+  - first:
+      4: 400054
+    second: wires_low
+  - first:
+      23: 2300000
+    second: antt_low
+  - first:
+      23: 2300002
+    second: arch_low
+  - first:
+      23: 2300004
+    second: body_low
+  - first:
+      23: 2300006
+    second: bodydoor_low
+  - first:
+      23: 2300008
+    second: bodyp_low
+  - first:
+      23: 2300010
+    second: cfront_low
+  - first:
+      23: 2300012
+    second: conpart_low
+  - first:
+      23: 2300014
+    second: crear_low
+  - first:
+      23: 2300016
+    second: cyl_low
+  - first:
+      23: 2300018
+    second: cylin_low
+  - first:
+      23: 2300020
+    second: cylside_low
+  - first:
+      23: 2300022
+    second: doorpart_low
+  - first:
+      23: 2300024
+    second: incover_low
+  - first:
+      23: 2300026
+    second: inncyl_low
+  - first:
+      23: 2300028
+    second: mec_low
+  - first:
+      23: 2300030
+    second: metalarms_low
+  - first:
+      23: 2300032
+    second: outbump_low
+  - first:
+      23: 2300034
+    second: partsenergy_low
+  - first:
+      23: 2300036
+    second: partsenergys_low
+  - first:
+      23: 2300038
+    second: prot_low
+  - first:
+      23: 2300040
+    second: prot_low 1
+  - first:
+      23: 2300042
+    second: rotorl_low
+  - first:
+      23: 2300044
+    second: rotorr_low
+  - first:
+      23: 2300046
+    second: sidedoor_low
+  - first:
+      23: 2300048
+    second: sidedoorh_low
+  - first:
+      23: 2300050
+    second: top_low
+  - first:
+      23: 2300052
+    second: wires_low
+  - first:
+      33: 3300000
+    second: antt_low
+  - first:
+      33: 3300002
+    second: arch_low
+  - first:
+      33: 3300004
+    second: body_low
+  - first:
+      33: 3300006
+    second: bodydoor_low
+  - first:
+      33: 3300008
+    second: bodyp_low
+  - first:
+      33: 3300010
+    second: cfront_low
+  - first:
+      33: 3300012
+    second: conpart_low
+  - first:
+      33: 3300014
+    second: crear_low
+  - first:
+      33: 3300016
+    second: cyl_low
+  - first:
+      33: 3300018
+    second: cylin_low
+  - first:
+      33: 3300020
+    second: cylside_low
+  - first:
+      33: 3300022
+    second: doorpart_low
+  - first:
+      33: 3300024
+    second: incover_low
+  - first:
+      33: 3300026
+    second: inncyl_low
+  - first:
+      33: 3300028
+    second: mec_low
+  - first:
+      33: 3300030
+    second: metalarms_low
+  - first:
+      33: 3300032
+    second: outbump_low
+  - first:
+      33: 3300034
+    second: partsenergy_low
+  - first:
+      33: 3300036
+    second: partsenergys_low
+  - first:
+      33: 3300038
+    second: prot_low
+  - first:
+      33: 3300040
+    second: prot_low 1
+  - first:
+      33: 3300042
+    second: rotorl_low
+  - first:
+      33: 3300044
+    second: rotorr_low
+  - first:
+      33: 3300046
+    second: sidedoor_low
+  - first:
+      33: 3300048
+    second: sidedoorh_low
+  - first:
+      33: 3300050
+    second: top_low
+  - first:
+      33: 3300052
+    second: wires_low
+  - first:
+      43: 4300000
+    second: body_low
+  - first:
+      43: 4300002
+    second: cyl_low
+  - first:
+      43: 4300004
+    second: antt_low
+  - first:
+      43: 4300006
+    second: partsenergy_low
+  - first:
+      43: 4300008
+    second: mec_low
+  - first:
+      43: 4300010
+    second: bodyp_low
+  - first:
+      43: 4300012
+    second: incover_low
+  - first:
+      43: 4300014
+    second: top_low
+  - first:
+      43: 4300016
+    second: cylin_low
+  - first:
+      43: 4300018
+    second: wires_low
+  - first:
+      43: 4300020
+    second: cylside_low
+  - first:
+      43: 4300022
+    second: cfront_low
+  - first:
+      43: 4300024
+    second: crear_low
+  - first:
+      43: 4300026
+    second: bodydoor_low
+  - first:
+      43: 4300028
+    second: sidedoor_low
+  - first:
+      43: 4300030
+    second: sidedoorh_low
+  - first:
+      43: 4300032
+    second: doorpart_low
+  - first:
+      43: 4300034
+    second: prot_low
+  - first:
+      43: 4300036
+    second: metalarms_low
+  - first:
+      43: 4300038
+    second: outbump_low
+  - first:
+      43: 4300040
+    second: conpart_low
+  - first:
+      43: 4300042
+    second: inncyl_low
+  - first:
+      43: 4300044
+    second: arch_low
+  - first:
+      43: 4300046
+    second: partsenergys_low
+  - first:
+      43: 4300048
+    second: prot_low
+  - first:
+      43: 4300050
+    second: rotorr_low
+  - first:
+      43: 4300052
+    second: rotorl_low
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 0.4
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -197,11 +499,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.4
     rootMotionBoneName: 
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
