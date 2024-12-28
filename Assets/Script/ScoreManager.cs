@@ -203,4 +203,43 @@ public class ScoreManager : MonoBehaviour
     {
         SceneManager.LoadScene("Level_8");
     }
+    public void level9()
+    {
+        SceneManager.LoadScene("Level_9");
+    }
+    public void level10()
+    {
+        SceneManager.LoadScene("Level_10");
+    }
+
+    public void level11()
+    {
+        SceneManager.LoadScene("Level_11");
+    }
+
+    public void level12()
+    {
+        SceneManager.LoadScene("Level_12");
+    }
+
+    public void level13()
+    {
+        SceneManager.LoadScene("Level_13");
+    }
+
+    public void level14()
+    {
+        SceneManager.LoadScene("Level_14");
+    }
+
+    public void level15()
+    {
+        SceneManager.LoadScene("Level_15");
+    }
+
+    public void level16()
+    {
+        SceneManager.LoadScene("Level_16");
+    }
+
 }
