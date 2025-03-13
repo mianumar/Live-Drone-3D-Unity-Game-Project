@@ -1,5 +1,5 @@
 using System.Collections;
-//FAIZ-using AL.Monetization.CustomAdmobAds.Scripts;
+using AL.Monetization.CustomAdmobAds.Scripts;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +11,7 @@ namespace AL.Utility.CustomLoading
         public GameObject loadingMenu;
         public Text loadingPercentage;
         private float _loadPercent;
-        //FAIZ-public OpenApp aM;
+        public OpenApp aM;
         public static bool once;
         void Start()
         {
@@ -37,7 +37,7 @@ namespace AL.Utility.CustomLoading
             {
           
                 once = true;
-                //FAIZ-aM.ShowAppOpenAd();
+                aM.ShowAppOpenAd();
                 Debug.Log("aaa");
                 PlayerPrefs.SetInt("openApp",PlayerPrefs.GetInt("openApp")+1);
             }

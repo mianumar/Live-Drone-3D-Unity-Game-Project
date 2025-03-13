@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
-//FAIZ-using AL.Monetization.CustomAdmobAds.Scripts;
+using AL.Monetization.CustomAdmobAds.Scripts;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -163,7 +163,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (!isAdShown)
         {
-            //FAIZ-AdManager.instance.ShowInterstitial();
+            AdManager.instance.ShowInterstitial();
             isAdShown = true;
         }
     }

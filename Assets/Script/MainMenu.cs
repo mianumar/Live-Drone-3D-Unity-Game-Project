@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using System.Collections;
-//FAIZ-using AL.Monetization.CustomAdmobAds.Scripts;
+using AL.Monetization.CustomAdmobAds.Scripts;
 
 public class MainMenu : MonoBehaviour
 {
@@ -28,6 +28,6 @@ public class MainMenu : MonoBehaviour
     }
     public void ShowInterstitial()
     {
-        //FAIZ-AdManager.instance.ShowInterstitial(); // paste this line anywhere you want to show interstitial 
+        AdManager.instance.ShowInterstitial(); // paste this line anywhere you want to show interstitial 
     }
 }
