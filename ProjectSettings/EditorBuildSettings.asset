@@ -32,4 +32,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_8.unity
     guid: fe20b36d35b799549b433ec6ea5b09f4
+  - enabled: 1
+    path: Assets/Scenes/Level_9.unity
+    guid: 71f661ef083a6644b8caecc3ade74316
+  - enabled: 1
+    path: Assets/Scenes/Level_10.unity
+    guid: 3dd6985d248a2724291b46a30456112a
+  - enabled: 1
+    path: Assets/Scenes/Level_11.unity
+    guid: 1ba646c4ba8e6b747929820824815cfc
+  - enabled: 1
+    path: Assets/Scenes/Level_12.unity
+    guid: 8fbc165d579552144af32511c7e676e7
+  - enabled: 1
+    path: Assets/Scenes/Level_13.unity
+    guid: 7af21dc0dc8f0c54bb72bf1994feb71e
+  - enabled: 1
+    path: Assets/Scenes/Level_14.unity
+    guid: 96ca786ea5ead4547a8912721c15eb41
+  - enabled: 1
+    path: Assets/Scenes/Level_15.unity
+    guid: d134704a43a7ca448b828ea0bec087d4
+  - enabled: 1
+    path: Assets/Scenes/Level_16.unity
+    guid: 14f36e849d58b63488563ebf14729714
+  - enabled: 1
+    path: Assets/Samples/Ads Mediation/8.7.0/Unity LevelPlay Sample/Scenes/LevelPlaySample.unity
+    guid: bd1eb3e1953724de08fadd7cbbc6d358
   m_configObjects: {}
