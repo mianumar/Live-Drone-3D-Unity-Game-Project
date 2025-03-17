@@ -38,7 +38,8 @@ public class LastLevelScoe : MonoBehaviour
 
     private void Start()
     {
-        Advertisements.Instance.Initialize();
+        //Faiz-
+/*        Advertisements.Instance.Initialize();
         
         if(Advertisements.Instance.UserConsentWasSet()==false)
         {
@@ -47,7 +48,7 @@ public class LastLevelScoe : MonoBehaviour
         else
         {
          Advertisements.Instance.Initialize();
-        }
+        }*/
         Time.timeScale = 1;
         UpdateScoreText();
         UpdateScoreSlider();
@@ -155,7 +156,7 @@ public class LastLevelScoe : MonoBehaviour
     private void LevelComplete()
     {
         Time.timeScale = 0;
-        Advertisements.Instance.ShowInterstitial();
+        //Faiz-Advertisements.Instance.ShowInterstitial();
         levelCompletePanel.SetActive(true);
     }
   
