@@ -56,7 +56,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_16.unity
     guid: 14f36e849d58b63488563ebf14729714
-  - enabled: 1
-    path: Assets/Samples/Ads Mediation/8.7.0/Unity LevelPlay Sample/Scenes/LevelPlaySample.unity
-    guid: bd1eb3e1953724de08fadd7cbbc6d358
   m_configObjects: {}
