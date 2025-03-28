@@ -1,0 +1,54 @@
+{
+    "name": "GamepadControllers",
+    "maps": [
+        {
+            "name": "Controller",
+            "id": "2e3122a8-4e45-46ba-8913-df654e4d557b",
+            "actions": [
+                {
+                    "name": "MenuNext",
+                    "type": "Button",
+                    "id": "1f26ce9b-4ac6-4c5b-9361-773154dcab76",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Test",
+                    "type": "Button",
+                    "id": "68e5fcd0-eefc-4b7e-8e77-388d51a5c616",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5f7ca645-b26c-4fe3-aa69-4f09f8254142",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenuNext",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4fb729f7-99ab-43b9-9141-27e30a9dbad5",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Test",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
