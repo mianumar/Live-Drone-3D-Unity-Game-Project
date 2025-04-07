@@ -69,7 +69,7 @@ public class GameControllerManager : MonoBehaviour
         }
         else
         {
-
+            Destroy(gameObject);
         }
 
         menuNextAction.Enable();
