@@ -58,7 +58,7 @@ public class GameControllerManager : MonoBehaviour
 
         // controller.Controller.MenuNext.performed += ctx => MenuNextBtn();
 
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        //SceneManager.sceneLoaded += OnSceneLoaded;
     }
     void Start()
     {
@@ -66,6 +66,7 @@ public class GameControllerManager : MonoBehaviour
         {
             Debug.Log("Game controller is connected!");
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
