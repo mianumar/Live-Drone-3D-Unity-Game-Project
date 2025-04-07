@@ -138,10 +138,10 @@ namespace DroneController
             [HideInInspector] public bool S;
             [HideInInspector] public bool A;
             [HideInInspector] public bool D;
-            [HideInInspector] public bool I;
-            [HideInInspector] public bool K;
-            [HideInInspector] public bool J;
-            [HideInInspector] public bool L;
+            [HideInInspector] public bool I;  //Sprint Up
+            [HideInInspector] public bool K;  //Sprint Down
+            [HideInInspector] public bool J;  // Rotate Drone Left
+            [HideInInspector] public bool L;  //Rotate Drone Right
 
             [HideInInspector] public Texture forward_button_texture;
             [HideInInspector] public Texture backward_button_texture;

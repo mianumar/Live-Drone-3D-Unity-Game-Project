@@ -66,6 +66,7 @@ public class GameControllerManager : MonoBehaviour
         {
             Debug.Log("Game controller is connected!");
             DontDestroyOnLoad(gameObject);
+            //droneMovementScript.SetJoystickCase();
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
@@ -181,8 +182,9 @@ public class GameControllerManager : MonoBehaviour
         if (Gamepad.all.Count > 0)
         {
             // Log all connected gamepads
-            foreach (var gamepad in Gamepad.all)
+            foreach (var item in Gamepad.all)
             {
+                gamepad = item;
                 Debug.Log("Connected gamepad: " + gamepad.displayName);
             }
 
@@ -197,54 +199,54 @@ public class GameControllerManager : MonoBehaviour
         return false;
     }
 
-    /*    private void HandleMovement(InputAction.CallbackContext context)
-        {
-            if (droneMovementScript == null)
-            {
-                Debug.LogError("DroneMovementScript is not assigned!");
-                return; // Prevent further execution if the reference is null
-            }
-
-            Vector2 movementInput = context.ReadValue<Vector2>();
-            // Translate this input into drone movement using WASD-like controls.
-            // Movement on the left stick corresponds to W (forward), S (backward), A (left), D (right).
-            float moveX = movementInput.x;
-            float moveY = movementInput.y;
-
-            // Apply movement logic to the drone (send this data to the drone's movement script)
-            // You can pass this data to your drone movement script for translation to physics.
-            Debug.Log($"Move - X: {moveX}, Y: {moveY}");
-
-            // Use triggers for Z-axis movement (Up/Down)
-            float moveZ = gamepad.leftTrigger.ReadValue() - gamepad.rightTrigger.ReadValue(); // L2 (left trigger) for up, R2 (right trigger) for down
-
-            // Use right stick for rotation (yaw: left/right rotation)
-            float rotationY = gamepad.rightStick.x.ReadValue(); // Right stick horizontal (rotation)
-
-            droneMovementScript.SetMovement(moveX, moveY, moveZ, rotationY);
-            *//*
-                    // Pass movement data to the DroneMovementScript
-                    droneMovementScript.Horizontal_A = moveX < 0 ? 1 : 0; // A key (left)
-                    droneMovementScript.Horizontal_D = moveX > 0 ? 1 : 0; // D key (right)
-                    droneMovementScript.Vertical_W = moveY > 0 ? 1 : 0; // W key (forward)
-                    droneMovementScript.Vertical_S = moveY < 0 ? 1 : 0; // S key (backward)*//*
-        }*/
-
     private void HandleMovement(InputAction.CallbackContext context)
     {
         if (droneMovementScript == null)
         {
             Debug.LogError("DroneMovementScript is not assigned!");
-            return;
+            return; // Prevent further execution if the reference is null
         }
 
         Vector2 movementInput = context.ReadValue<Vector2>();
+        // Translate this input into drone movement using WASD-like controls.
+        // Movement on the left stick corresponds to W (forward), S (backward), A (left), D (right).
         float moveX = movementInput.x;
         float moveY = movementInput.y;
 
-        // Handle movement values and pass them to DroneMovement
-        droneMovementScript.SetMovement(moveX, moveY);
+        // Apply movement logic to the drone (send this data to the drone's movement script)
+        // You can pass this data to your drone movement script for translation to physics.
+        Debug.Log($"Move - X: {moveX}, Y: {moveY}");
+
+        // Use triggers for Z-axis movement (Up/Down)
+        float moveZ = gamepad.leftTrigger.ReadValue() - gamepad.rightTrigger.ReadValue(); // L2 (left trigger) for up, R2 (right trigger) for down
+
+        // Use right stick for rotation (yaw: left/right rotation)
+        float rotationY = gamepad.rightStick.x.ReadValue(); // Right stick horizontal (rotation)
+
+        droneMovementScript.SetMovement(moveX, moveY, moveZ, rotationY);
+
+        // Pass movement data to the DroneMovementScript
+        droneMovementScript.Horizontal_A = moveX < 0 ? 1 : 0; // A key (left)
+        droneMovementScript.Horizontal_D = moveX > 0 ? 1 : 0; // D key (right)
+        droneMovementScript.Vertical_W = moveY > 0 ? 1 : 0; // W key (forward)
+        droneMovementScript.Vertical_S = moveY < 0 ? 1 : 0; // S key (backward)
     }
+
+    /*    private void HandleMovement(InputAction.CallbackContext context)
+        {
+            if (droneMovementScript == null)
+            {
+                Debug.LogError("DroneMovementScript is not assigned!");
+                return;
+            }
+
+            Vector2 movementInput = context.ReadValue<Vector2>();
+            float moveX = movementInput.x;
+            float moveY = movementInput.y;
+
+            // Handle movement values and pass them to DroneMovement
+            droneMovementScript.SetMovement(moveX, moveY);
+        }*/
 
     private void HandleRotation(InputAction.CallbackContext context)
     {

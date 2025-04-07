@@ -787,11 +787,11 @@ MonoBehaviour:
     wantedForwardTilt: 15
     wantedSideTilt: 15
     droneSoundAmplifier: 0.7
-  inputEditorSelection: 1
+  inputEditorSelection: 2
   idle: 1
   animatedGameObject: {fileID: 95794569009011956}
   mobile_turned_on: 0
-  joystick_turned_on: 0
+  joystick_turned_on: 1
   mainCamera: {fileID: 0}
   droneObject: {fileID: 4360068208049102}
   velocity: 0.0000036725544

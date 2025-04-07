@@ -30,44 +30,49 @@ public class DroneMovement : DroneMovementScript {
         CameraCorrectPickAndTranslatingInputToWSAD(); //setting input for keys, translating joystick, mobile inputs as WSAD (depending on which is turned on)
     }
 
-    /*    public void SetMovement(float moveX, float moveY, float moveZ, float rotationY)
+    public void SetMovement(float moveX, float moveY, float moveZ, float rotationY)
+    {
+        // Movement Left/Right (X-axis)
+        if (moveX != 0)
         {
-            // Movement Left/Right (X-axis)
-            if (moveX != 0)
-            {
-                Horizontal_A = moveX < 0 ? 1 : 0; // A key (left)
-                Horizontal_D = moveX > 0 ? 1 : 0; // D key (right)
-            }
+            Horizontal_A = moveX < 0 ? 1 : 0; // A key (left)
+            Horizontal_D = moveX > 0 ? 1 : 0; // D key (right)
+        }
 
-            // Movement Forward/Backward (Z-axis)
-            if (moveY != 0)
-            {
-                Vertical_W = moveY > 0 ? 1 : 0; // W key (forward)
-                Vertical_S = moveY < 0 ? 1 : 0; // S key (backward)
-            }
+        // Movement Forward/Backward (Z-axis)
+        if (moveY != 0)
+        {
+            Vertical_W = moveY > 0 ? 1 : 0; // W key (forward)
+            Vertical_S = moveY < 0 ? 1 : 0; // S key (backward)
+        }
 
-            // Movement Up/Down (Y-axis) (using trigger input for Z axis)
-            if (moveZ != 0)
-            {
-                Vertical_I = moveZ > 0 ? 1 : 0; // Upward movement (I key)
-                Vertical_K = moveZ < 0 ? 1 : 0; // Downward movement (K key)
-            }
+        // Movement Up/Down (Y-axis) (using trigger input for Z axis)
+        if (moveZ != 0)
+        {
+            Vertical_I = moveZ > 0 ? 1 : 0; // Upward movement (I key)
+            Vertical_K = moveZ < 0 ? 1 : 0; // Downward movement (K key)
+        }
 
-            // Rotation (Yaw: Left/Right)
-            if (rotationY != 0)
-            {
-                Horizontal_J = rotationY < 0 ? 1 : 0; // Rotate left (J key)
-                Horizontal_L = rotationY > 0 ? 1 : 0; // Rotate right (L key)
-            }
+        // Rotation (Yaw: Left/Right)
+        if (rotationY != 0)
+        {
+            Horizontal_J = rotationY < 0 ? 1 : 0; // Rotate left (J key)
+            Horizontal_L = rotationY > 0 ? 1 : 0; // Rotate right (L key)
+        }
 
-            // You can call existing methods to apply changes to the drone's movement
-            MovementLeftRight(); // Handles left-right movement logic
-            MovementForward();   // Handles forward-backward movement logic
-            MovementUpDown();    // Handles up-down movement logic
-            Rotation();          // Applies rotation to the drone
-        }*/
+        // You can call existing methods to apply changes to the drone's movement
+        MovementLeftRight(); // Handles left-right movement logic
+        MovementForward();   // Handles forward-backward movement logic
+        MovementUpDown();    // Handles up-down movement logic
+        Rotation();          // Applies rotation to the drone
+    }
 
-    public void SetMovement(float moveX, float moveY)
+/*    public void SetJoystickCase()
+    {
+        inputEditorSelection = 2;
+    }*/
+
+    /*public void SetMovement(float moveX, float moveY)
     {
         // Set movement for Left/Right (X-axis)
         if (moveX > 0)
@@ -106,6 +111,6 @@ public class DroneMovement : DroneMovementScript {
         // Apply movement logic (you can call your movement methods here)
         MovementLeftRight(); // Applies left/right movement logic
         MovementForward();   // Applies forward/backward movement logic
-    }
+    }*/
 
 }
