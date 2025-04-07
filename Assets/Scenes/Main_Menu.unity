@@ -14108,6 +14108,7 @@ MonoBehaviour:
   WELCOME_TO_DRONE_LIFE: {fileID: 134750454}
   mainMenu: {fileID: 454070054}
   inputActions: {fileID: -944628639613478452, guid: ff22ae6b81a3aaf49b4f2c9fd3a0ea88, type: 3}
+  droneMovementScript: {fileID: 0}
 --- !u!4 &1290514408
 Transform:
   m_ObjectHideFlags: 0
