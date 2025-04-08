@@ -1,4 +1,5 @@
 ﻿using DroneController.Physics;
+using UnityEngine;
 
 public class DroneMovement : DroneMovementScript {
 
@@ -35,8 +36,17 @@ public class DroneMovement : DroneMovementScript {
         // Movement Left/Right (X-axis)
         if (moveX != 0)
         {
+            Debug.Log("I'm here");
             Horizontal_A = moveX < 0 ? 1 : 0; // A key (left)
             Horizontal_D = moveX > 0 ? 1 : 0; // D key (right)
+
+            //Intaj
+            if (Horizontal_A > 0)
+                A = true;
+            //Intaj
+            if (Horizontal_D>0)
+                D = true;
+
         }
 
         // Movement Forward/Backward (Z-axis)
