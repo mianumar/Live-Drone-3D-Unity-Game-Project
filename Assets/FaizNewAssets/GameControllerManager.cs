@@ -226,10 +226,10 @@ public class GameControllerManager : MonoBehaviour
         droneMovementScript.SetMovement(moveX, moveY, moveZ, rotationY);
 
         // Pass movement data to the DroneMovementScript
-        droneMovementScript.Horizontal_A = moveX < 0 ? 1 : 0; // A key (left)
+/*        droneMovementScript.Horizontal_A = moveX < 0 ? 1 : 0; // A key (left)
         droneMovementScript.Horizontal_D = moveX > 0 ? 1 : 0; // D key (right)
         droneMovementScript.Vertical_W = moveY > 0 ? 1 : 0; // W key (forward)
-        droneMovementScript.Vertical_S = moveY < 0 ? 1 : 0; // S key (backward)
+        droneMovementScript.Vertical_S = moveY < 0 ? 1 : 0; // S key (backward)*/
     }
 
     /*    private void HandleMovement(InputAction.CallbackContext context)
