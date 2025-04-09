@@ -37,6 +37,24 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""moveAction"",
+                    ""type"": ""Value"",
+                    ""id"": ""75a097eb-b98f-40aa-8ad1-5215bba3da3d"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""lookAction"",
+                    ""type"": ""Value"",
+                    ""id"": ""8668d458-ebfb-497e-b097-9487b4ecbcf6"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
                     ""name"": ""Test"",
                     ""type"": ""Button"",
                     ""id"": ""68e5fcd0-eefc-4b7e-8e77-388d51a5c616"",
@@ -68,6 +86,160 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
                     ""action"": ""Test"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""1151e730-2c49-4527-a1f0-f84daaa88b5b"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""moveAction"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""d64ff41e-908d-457c-aa65-11809e198613"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""moveAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""f8d9931b-c6d4-4d03-badf-1c30789cf4c9"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""moveAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""0af16306-beb1-47ef-bdb6-c76f5d5df1d4"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""moveAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""cc881612-f63d-4586-8f46-395b825b1848"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""moveAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""de7f9dc8-1edc-4d3f-88b1-7b061021b0d1"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""moveAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""03a6b2eb-2087-4b83-9e31-9f3e9df1c402"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""moveAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""44f54983-025e-4f20-b485-f984b8187f52"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""moveAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""d45e87ed-ed4f-49b1-8f0a-389d70506d4d"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""moveAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""e2e7e542-b9b3-4198-9a37-b169f2e2ce56"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""lookAction"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""af1a9eba-4ed7-4437-a834-2f4c707767d3"",
+                    ""path"": ""<Gamepad>/rightStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""lookAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""2dba08b2-867a-418b-9d07-967e5c236770"",
+                    ""path"": ""<Gamepad>/rightStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""lookAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""c2d7f525-445b-418e-a18c-1426910f7e7b"",
+                    ""path"": ""<Gamepad>/rightStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""lookAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""db172457-df1a-4cc1-8fbe-65bf8a7be22f"",
+                    ""path"": ""<Gamepad>/rightStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""lookAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -77,6 +249,8 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
         // Controller
         m_Controller = asset.FindActionMap("Controller", throwIfNotFound: true);
         m_Controller_MenuNext = m_Controller.FindAction("MenuNext", throwIfNotFound: true);
+        m_Controller_moveAction = m_Controller.FindAction("moveAction", throwIfNotFound: true);
+        m_Controller_lookAction = m_Controller.FindAction("lookAction", throwIfNotFound: true);
         m_Controller_Test = m_Controller.FindAction("Test", throwIfNotFound: true);
     }
 
@@ -140,12 +314,16 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Controller;
     private List<IControllerActions> m_ControllerActionsCallbackInterfaces = new List<IControllerActions>();
     private readonly InputAction m_Controller_MenuNext;
+    private readonly InputAction m_Controller_moveAction;
+    private readonly InputAction m_Controller_lookAction;
     private readonly InputAction m_Controller_Test;
     public struct ControllerActions
     {
         private @GamepadControllers m_Wrapper;
         public ControllerActions(@GamepadControllers wrapper) { m_Wrapper = wrapper; }
         public InputAction @MenuNext => m_Wrapper.m_Controller_MenuNext;
+        public InputAction @moveAction => m_Wrapper.m_Controller_moveAction;
+        public InputAction @lookAction => m_Wrapper.m_Controller_lookAction;
         public InputAction @Test => m_Wrapper.m_Controller_Test;
         public InputActionMap Get() { return m_Wrapper.m_Controller; }
         public void Enable() { Get().Enable(); }
@@ -159,6 +337,12 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
             @MenuNext.started += instance.OnMenuNext;
             @MenuNext.performed += instance.OnMenuNext;
             @MenuNext.canceled += instance.OnMenuNext;
+            @moveAction.started += instance.OnMoveAction;
+            @moveAction.performed += instance.OnMoveAction;
+            @moveAction.canceled += instance.OnMoveAction;
+            @lookAction.started += instance.OnLookAction;
+            @lookAction.performed += instance.OnLookAction;
+            @lookAction.canceled += instance.OnLookAction;
             @Test.started += instance.OnTest;
             @Test.performed += instance.OnTest;
             @Test.canceled += instance.OnTest;
@@ -169,6 +353,12 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
             @MenuNext.started -= instance.OnMenuNext;
             @MenuNext.performed -= instance.OnMenuNext;
             @MenuNext.canceled -= instance.OnMenuNext;
+            @moveAction.started -= instance.OnMoveAction;
+            @moveAction.performed -= instance.OnMoveAction;
+            @moveAction.canceled -= instance.OnMoveAction;
+            @lookAction.started -= instance.OnLookAction;
+            @lookAction.performed -= instance.OnLookAction;
+            @lookAction.canceled -= instance.OnLookAction;
             @Test.started -= instance.OnTest;
             @Test.performed -= instance.OnTest;
             @Test.canceled -= instance.OnTest;
@@ -192,6 +382,8 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
     public interface IControllerActions
     {
         void OnMenuNext(InputAction.CallbackContext context);
+        void OnMoveAction(InputAction.CallbackContext context);
+        void OnLookAction(InputAction.CallbackContext context);
         void OnTest(InputAction.CallbackContext context);
     }
 }
