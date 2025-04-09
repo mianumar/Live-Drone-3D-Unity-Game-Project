@@ -42,7 +42,7 @@ public class GameControllerManager : MonoBehaviour
     {
         menuNextAction = inputActions.FindAction("MenuNext");
         moveAction = inputActions.FindAction("moveAction");
-        //lookAction = inputActions.FindAction("Look");
+        lookAction = inputActions.FindAction("lookAction");
         //throttleUpAction = inputActions.FindAction("ThrottleUp");
         //throttleDownAction = inputActions.FindAction("ThrottleDown");
 
@@ -50,7 +50,7 @@ public class GameControllerManager : MonoBehaviour
 
         menuNextAction.performed += ctx => NextBtnPressed();
         moveAction.performed += ctx => HandleMovement(ctx);
-        //lookAction.performed += ctx => HandleRotation(ctx);
+        lookAction.performed += ctx => HandleRotation(ctx);
         //throttleUpAction.performed += ctx => HandleThrottleUp(ctx);
         //throttleDownAction.performed += ctx => HandleThrottleDown(ctx);
 
@@ -106,7 +106,7 @@ public class GameControllerManager : MonoBehaviour
     private void EnableDroneInput()
     {
         moveAction.Enable();
-        //lookAction.Enable();
+        lookAction.Enable();
         //throttleUpAction.Enable();
         //throttleDownAction.Enable();
     }
@@ -115,7 +115,7 @@ public class GameControllerManager : MonoBehaviour
     private void DisableDroneInput()
     {
         moveAction.Disable();
-        //lookAction.Disable();
+        lookAction.Disable();
         //throttleUpAction.Disable();
         //throttleDownAction.Disable();
     }
@@ -257,6 +257,26 @@ public class GameControllerManager : MonoBehaviour
 
         // Apply rotation logic to the drone (send this data to the drone's rotation script)
         Debug.Log($"Look - Rotation X: {rotationX}, Y: {rotationY}");
+
+        // Update yaw (rotation on the Y axis)
+        if (rotationX != 0)
+        {
+            // Apply rotation to the drone (you can adjust the multiplier to make it more sensitive)
+            droneMovementScript.Horizontal_J = rotationX < 0 ? 1 : 0; // Rotate left (J key)
+            droneMovementScript.Horizontal_L = rotationX > 0 ? 1 : 0; // Rotate right (L key)
+        }
+
+        // Update pitch (rotation on the X axis)
+        if (rotationY != 0)
+        {
+            // Apply pitch (up-down rotation)
+            // You can modify this value to apply pitch sensitivity
+            float pitchAmount = rotationY * droneMovementScript.rotationAmount; // Adjust for pitch sensitivity
+            droneMovementScript.tiltAmountForward = Mathf.Clamp(pitchAmount, -droneMovementScript.wantedForwardTilt, droneMovementScript.wantedForwardTilt);
+        }
+
+        // You can also add smooth damping here to avoid sudden jerky rotations if needed
+        droneMovementScript.Rotation();
     }
 
     private void HandleThrottleUp(InputAction.CallbackContext context)
