@@ -41,10 +41,10 @@ public class DroneMovement : DroneMovementScript {
             Horizontal_D = moveX > 0 ? 1 : 0; // D key (right)
 
             //Intaj
-            if (Horizontal_A > 0)
+            if (moveX < 0)
                 A = true;
             //Intaj
-            if (Horizontal_D>0)
+            if (moveX > 0)
                 D = true;
 
         }
@@ -52,8 +52,16 @@ public class DroneMovement : DroneMovementScript {
         // Movement Forward/Backward (Z-axis)
         if (moveY != 0)
         {
+            Debug.Log("I'm here");
             Vertical_W = moveY > 0 ? 1 : 0; // W key (forward)
             Vertical_S = moveY < 0 ? 1 : 0; // S key (backward)
+
+            //Intaj
+            if (moveY < 0)
+                S = true;
+            //Intaj
+            if (moveY > 0)
+                W = true;
         }
 
         // Movement Up/Down (Y-axis) (using trigger input for Z axis)
