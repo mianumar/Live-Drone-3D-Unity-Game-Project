@@ -206,7 +206,7 @@ namespace DroneController
             private float wantedYRotation;
             private float rotationYVelocity;
 
-            private float tiltAmountForward = 0;
+            public float tiltAmountForward = 0;
             private float tiltVelocityForward;
 
 			[HideInInspector] public float Vertical_W = 0;
