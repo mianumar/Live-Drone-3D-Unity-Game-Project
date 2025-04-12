@@ -55,6 +55,24 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
+                    ""name"": ""throttleUpAction"",
+                    ""type"": ""Value"",
+                    ""id"": ""d1e30f97-3f56-4591-870d-bd87084f60c9"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""throttleDownAction"",
+                    ""type"": ""Value"",
+                    ""id"": ""1a4875ba-c6e1-4a04-b1ac-9f2d8b249983"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
                     ""name"": ""Test"",
                     ""type"": ""Button"",
                     ""id"": ""68e5fcd0-eefc-4b7e-8e77-388d51a5c616"",
@@ -240,6 +258,72 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
                     ""action"": ""lookAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""52c3f127-5bf2-45f5-a4c8-77905abc3cc3"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""throttleUpAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e281c8db-bf9a-4771-bb9c-3a9344f06be1"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""throttleUpAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""38e07e26-03e4-4742-b8e8-8522060d92d2"",
+                    ""path"": ""<Gamepad>/rightStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""throttleUpAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dbb71975-a729-4c16-802a-4a9f7a956f52"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""throttleDownAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""31f08051-b46c-42e1-9266-d437b595fd4a"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""throttleDownAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d69d14ae-c4b9-45b6-be8f-fcfd2e8c1fd7"",
+                    ""path"": ""<Gamepad>/rightStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""throttleDownAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -251,6 +335,8 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
         m_Controller_MenuNext = m_Controller.FindAction("MenuNext", throwIfNotFound: true);
         m_Controller_moveAction = m_Controller.FindAction("moveAction", throwIfNotFound: true);
         m_Controller_lookAction = m_Controller.FindAction("lookAction", throwIfNotFound: true);
+        m_Controller_throttleUpAction = m_Controller.FindAction("throttleUpAction", throwIfNotFound: true);
+        m_Controller_throttleDownAction = m_Controller.FindAction("throttleDownAction", throwIfNotFound: true);
         m_Controller_Test = m_Controller.FindAction("Test", throwIfNotFound: true);
     }
 
@@ -316,6 +402,8 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controller_MenuNext;
     private readonly InputAction m_Controller_moveAction;
     private readonly InputAction m_Controller_lookAction;
+    private readonly InputAction m_Controller_throttleUpAction;
+    private readonly InputAction m_Controller_throttleDownAction;
     private readonly InputAction m_Controller_Test;
     public struct ControllerActions
     {
@@ -324,6 +412,8 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
         public InputAction @MenuNext => m_Wrapper.m_Controller_MenuNext;
         public InputAction @moveAction => m_Wrapper.m_Controller_moveAction;
         public InputAction @lookAction => m_Wrapper.m_Controller_lookAction;
+        public InputAction @throttleUpAction => m_Wrapper.m_Controller_throttleUpAction;
+        public InputAction @throttleDownAction => m_Wrapper.m_Controller_throttleDownAction;
         public InputAction @Test => m_Wrapper.m_Controller_Test;
         public InputActionMap Get() { return m_Wrapper.m_Controller; }
         public void Enable() { Get().Enable(); }
@@ -343,6 +433,12 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
             @lookAction.started += instance.OnLookAction;
             @lookAction.performed += instance.OnLookAction;
             @lookAction.canceled += instance.OnLookAction;
+            @throttleUpAction.started += instance.OnThrottleUpAction;
+            @throttleUpAction.performed += instance.OnThrottleUpAction;
+            @throttleUpAction.canceled += instance.OnThrottleUpAction;
+            @throttleDownAction.started += instance.OnThrottleDownAction;
+            @throttleDownAction.performed += instance.OnThrottleDownAction;
+            @throttleDownAction.canceled += instance.OnThrottleDownAction;
             @Test.started += instance.OnTest;
             @Test.performed += instance.OnTest;
             @Test.canceled += instance.OnTest;
@@ -359,6 +455,12 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
             @lookAction.started -= instance.OnLookAction;
             @lookAction.performed -= instance.OnLookAction;
             @lookAction.canceled -= instance.OnLookAction;
+            @throttleUpAction.started -= instance.OnThrottleUpAction;
+            @throttleUpAction.performed -= instance.OnThrottleUpAction;
+            @throttleUpAction.canceled -= instance.OnThrottleUpAction;
+            @throttleDownAction.started -= instance.OnThrottleDownAction;
+            @throttleDownAction.performed -= instance.OnThrottleDownAction;
+            @throttleDownAction.canceled -= instance.OnThrottleDownAction;
             @Test.started -= instance.OnTest;
             @Test.performed -= instance.OnTest;
             @Test.canceled -= instance.OnTest;
@@ -384,6 +486,8 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
         void OnMenuNext(InputAction.CallbackContext context);
         void OnMoveAction(InputAction.CallbackContext context);
         void OnLookAction(InputAction.CallbackContext context);
+        void OnThrottleUpAction(InputAction.CallbackContext context);
+        void OnThrottleDownAction(InputAction.CallbackContext context);
         void OnTest(InputAction.CallbackContext context);
     }
 }
