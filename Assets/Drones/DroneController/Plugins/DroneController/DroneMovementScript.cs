@@ -990,6 +990,7 @@ namespace DroneController
             {
                 if (A)
                 {
+                    Debug.Log("MovementLeftRight :: ");
                     ourDrone.AddRelativeForce(Vector3.right * Horizontal_A * sideMovementAmount);
                     tiltAmountSideways = Mathf.SmoothDamp(tiltAmountSideways, -wantedSideTilt * Horizontal_A, ref tiltVelocitySideways, tiltMovementSpeed);
                 }

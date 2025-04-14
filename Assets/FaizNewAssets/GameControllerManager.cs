@@ -30,16 +30,21 @@ public class GameControllerManager : MonoBehaviour
     private InputAction lookAction;       // Right Stick (Yaw/Rotation, potentially Pitch if needed later)
     private InputAction throttleUpAction; // e.g., Right Trigger
     private InputAction throttleDownAction;// e.g., Left Trigger
+    private InputAction popupConfirmAction; // *** NEW: For Level End Popups ***
 
     // Drone Reference
     private DroneMovement droneMovementScript; // Changed to DroneMovement type
     private bool isDroneInputActive = false; // Flag to control input processing
 
+    // Panels Reference
+    private const string LEVEL_COMPLETE_TAG = "LevelCompletePopup"; // Tag for Win Panel
+    private const string DEAD_PANEL_TAG = "DeadPanelPopup";         // Tag for Lose Panel
+
+
     #region Unity Lifecycle Methods
 
     private void Awake()
     {
-        // Ensure this object persists across scenes if a controller is connected
         if (IsControllerConnected())
         {
             Debug.Log("Gamepad connected. Persisting GameControllerManager.");
@@ -66,9 +71,11 @@ public class GameControllerManager : MonoBehaviour
         lookAction = inputActions.FindAction("lookAction");       // Ensure action named "Look" exists (Vector2, Right Stick)
         throttleUpAction = inputActions.FindAction("throttleUpAction"); // Ensure action named "ThrottleUp" exists (float, e.g., Right Trigger)
         throttleDownAction = inputActions.FindAction("throttleDownAction"); // Ensure action named "ThrottleDown" exists (float, e.g., Left Trigger)
+        popupConfirmAction = inputActions.FindAction("PopupConfirm"); // to Manage Popup Inputs
+
 
         // --- Validate Actions ---
-        if (menuNextAction == null || moveAction == null || lookAction == null || throttleUpAction == null || throttleDownAction == null)
+        if (menuNextAction == null || moveAction == null || lookAction == null || throttleUpAction == null || throttleDownAction == null || popupConfirmAction == null)
         {
             Debug.LogError("One or more required Input Actions could not be found! Check names in the Input Actions Asset ('MenuNext', 'Move', 'Look', 'ThrottleUp', 'ThrottleDown').");
             Destroy(gameObject);
@@ -78,6 +85,7 @@ public class GameControllerManager : MonoBehaviour
         // --- Subscribe to Discrete Actions ---
         // Only subscribe 'performed' for button-like actions
         menuNextAction.performed += ctx => HandleMenuNext();
+        popupConfirmAction.performed += ctx2 => HandlePopupConfirm();
 
         Debug.Log("GameControllerManager Awake completed.");
     }
@@ -108,6 +116,7 @@ public class GameControllerManager : MonoBehaviour
         lookAction?.Enable();
         throttleUpAction?.Enable();
         throttleDownAction?.Enable();
+        popupConfirmAction?.Enable();
     }
 
     private void OnDisable()
@@ -118,9 +127,11 @@ public class GameControllerManager : MonoBehaviour
         lookAction?.Disable();
         throttleUpAction?.Disable();
         throttleDownAction?.Disable();
+        popupConfirmAction?.Disable();
 
         // Unsubscribe from events
         if (menuNextAction != null) menuNextAction.performed -= ctx => HandleMenuNext();
+        if (popupConfirmAction != null) popupConfirmAction.performed -= ctx2 => HandlePopupConfirm(); //Win and Lose Panel Handle
         SceneManager.sceneLoaded -= OnSceneLoaded; // Unsubscribe from scene changes
     }
 
@@ -319,6 +330,99 @@ public class GameControllerManager : MonoBehaviour
         else
         {
             Debug.Log("MenuNext pressed, but no known active panel state matched.");
+        }
+    }
+
+    #endregion
+
+    #region External Hooks for Popups (Call these from your popup activation scripts)
+
+    public void HandlePopupConfirm()
+    {
+        Debug.Log("HandlePopupConfirm");
+
+        // Get the levelCompletePanel GameObject
+        GameObject levelCompletePanel = ScoreManager.instance.levelCompletePanel;
+        GameObject deadPanel = ScoreManager.instance.deadPanel;
+
+        if (levelCompletePanel != null && levelCompletePanel.activeSelf)
+        {
+
+            // Find the Result object first
+            Transform resultTransform = levelCompletePanel.transform.Find("Result");
+
+            if (resultTransform != null)
+            {
+                // Now find the Button_Claim under Result
+                Transform buttonClaimTransform = resultTransform.Find("Button_Claim");
+
+                if (buttonClaimTransform != null)
+                {
+                    // Get the Button component
+                    UnityEngine.UI.Button buttonClaim = buttonClaimTransform.GetComponent<UnityEngine.UI.Button>();
+
+                    if (buttonClaim != null)
+                    {
+                        // Simulate button press
+                        buttonClaim.onClick.Invoke();
+                        Debug.Log("Button_Claim pressed successfully");
+                    }
+                    else
+                    {
+                        Debug.LogError("Button component not found on Button_Claim object");
+                    }
+                }
+                else
+                {
+                    Debug.LogError("Button_Claim not found under Result object");
+                }
+            }
+            else
+            {
+                Debug.LogError("Result object not found under levelCompletePanel");
+            }
+        }
+    else if (deadPanel != null && deadPanel.activeSelf)
+        {
+
+            // Find the Result object first
+            Transform continueTransform = deadPanel.transform.Find("Continue");
+
+            if (continueTransform != null)
+            {
+                // Now find the Button_Claim under Result
+                Transform buttonContinueTransform = continueTransform.Find("Button_Continue");
+
+                if (buttonContinueTransform != null)
+                {
+                    // Get the Button component
+                    UnityEngine.UI.Button buttonClaim = buttonContinueTransform.GetComponent<UnityEngine.UI.Button>();
+
+                    if (buttonClaim != null)
+                    {
+                        // Simulate button press
+                        buttonClaim.onClick.Invoke();
+                        Debug.Log("Button_Continue pressed successfully");
+                    }
+                    else
+                    {
+                        Debug.LogError("Button component not found on Continue object");
+                    }
+                }
+                else
+                {
+                    Debug.LogError("Button_Continue not found under Continue object");
+                }
+            }
+            else
+            {
+                Debug.LogError("continueTransform object not found under deadPanel");
+            }
+
+        }
+    else
+        {
+            Debug.LogError("levelCompletePanel  and DeadPanel is null");
         }
     }
 

@@ -73,6 +73,15 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
+                    ""name"": ""PopupConfirm"",
+                    ""type"": ""Button"",
+                    ""id"": ""1574745c-55ca-4068-8564-551840dffa89"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Test"",
                     ""type"": ""Button"",
                     ""id"": ""68e5fcd0-eefc-4b7e-8e77-388d51a5c616"",
@@ -324,6 +333,28 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
                     ""action"": ""throttleDownAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2095724c-b144-41d1-b823-85f38402c4e6"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PopupConfirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a85df18e-44bc-45c7-a927-f934ed76094b"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PopupConfirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -337,6 +368,7 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
         m_Controller_lookAction = m_Controller.FindAction("lookAction", throwIfNotFound: true);
         m_Controller_throttleUpAction = m_Controller.FindAction("throttleUpAction", throwIfNotFound: true);
         m_Controller_throttleDownAction = m_Controller.FindAction("throttleDownAction", throwIfNotFound: true);
+        m_Controller_PopupConfirm = m_Controller.FindAction("PopupConfirm", throwIfNotFound: true);
         m_Controller_Test = m_Controller.FindAction("Test", throwIfNotFound: true);
     }
 
@@ -404,6 +436,7 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controller_lookAction;
     private readonly InputAction m_Controller_throttleUpAction;
     private readonly InputAction m_Controller_throttleDownAction;
+    private readonly InputAction m_Controller_PopupConfirm;
     private readonly InputAction m_Controller_Test;
     public struct ControllerActions
     {
@@ -414,6 +447,7 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
         public InputAction @lookAction => m_Wrapper.m_Controller_lookAction;
         public InputAction @throttleUpAction => m_Wrapper.m_Controller_throttleUpAction;
         public InputAction @throttleDownAction => m_Wrapper.m_Controller_throttleDownAction;
+        public InputAction @PopupConfirm => m_Wrapper.m_Controller_PopupConfirm;
         public InputAction @Test => m_Wrapper.m_Controller_Test;
         public InputActionMap Get() { return m_Wrapper.m_Controller; }
         public void Enable() { Get().Enable(); }
@@ -439,6 +473,9 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
             @throttleDownAction.started += instance.OnThrottleDownAction;
             @throttleDownAction.performed += instance.OnThrottleDownAction;
             @throttleDownAction.canceled += instance.OnThrottleDownAction;
+            @PopupConfirm.started += instance.OnPopupConfirm;
+            @PopupConfirm.performed += instance.OnPopupConfirm;
+            @PopupConfirm.canceled += instance.OnPopupConfirm;
             @Test.started += instance.OnTest;
             @Test.performed += instance.OnTest;
             @Test.canceled += instance.OnTest;
@@ -461,6 +498,9 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
             @throttleDownAction.started -= instance.OnThrottleDownAction;
             @throttleDownAction.performed -= instance.OnThrottleDownAction;
             @throttleDownAction.canceled -= instance.OnThrottleDownAction;
+            @PopupConfirm.started -= instance.OnPopupConfirm;
+            @PopupConfirm.performed -= instance.OnPopupConfirm;
+            @PopupConfirm.canceled -= instance.OnPopupConfirm;
             @Test.started -= instance.OnTest;
             @Test.performed -= instance.OnTest;
             @Test.canceled -= instance.OnTest;
@@ -488,6 +528,7 @@ public partial class @GamepadControllers: IInputActionCollection2, IDisposable
         void OnLookAction(InputAction.CallbackContext context);
         void OnThrottleUpAction(InputAction.CallbackContext context);
         void OnThrottleDownAction(InputAction.CallbackContext context);
+        void OnPopupConfirm(InputAction.CallbackContext context);
         void OnTest(InputAction.CallbackContext context);
     }
 }

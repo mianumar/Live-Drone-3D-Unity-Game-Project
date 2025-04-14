@@ -51,6 +51,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "PopupConfirm",
+                    "type": "Button",
+                    "id": "1574745c-55ca-4068-8564-551840dffa89",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Test",
                     "type": "Button",
                     "id": "68e5fcd0-eefc-4b7e-8e77-388d51a5c616",
@@ -300,6 +309,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "throttleDownAction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2095724c-b144-41d1-b823-85f38402c4e6",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PopupConfirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a85df18e-44bc-45c7-a927-f934ed76094b",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PopupConfirm",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
