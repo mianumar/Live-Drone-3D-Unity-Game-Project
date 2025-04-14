@@ -266,7 +266,7 @@ public class GameControllerManager : MonoBehaviour
         Vector2 moveInput = moveAction.ReadValue<Vector2>();     // Left Stick XY
         Vector2 lookInput = lookAction.ReadValue<Vector2>();     // Right Stick XY
         float throttleUp = throttleUpAction.ReadValue<float>();   // Right Trigger (0 to 1)
-        Debug.Log("throttleUp " + throttleUp);
+        //Debug.Log("throttleUp " + throttleUp);
         float throttleDown = throttleDownAction.ReadValue<float>(); // Left Trigger (0 to 1)
 
         // --- Update DroneMovementScript's custom feed variables ---
@@ -300,6 +300,11 @@ public class GameControllerManager : MonoBehaviour
     // Called when the MenuNext action is performed
     private void HandleMenuNext()
     {
+        if(SceneManager.GetActiveScene().name != "Main_Menu")
+        {
+            menuNextAction?.Disable();
+            return;
+        }
         // This logic seems tied to specific panel states in the MainMenu scene
         Debug.Log("MenuNext Action Performed");
 
@@ -313,23 +318,59 @@ public class GameControllerManager : MonoBehaviour
             }
         }
 
-        // Check panel states (ensure references are valid)
-        // This part might need adjustment based on your exact UI flow in MainMenu
         if (welcomePanel != null && welcomePanel.activeSelf)
         {
-            ShowTutorialPanel();
+            //ShowTutorialPanel();
+            Transform buttonTransform = welcomePanel.transform.Find("Button_Skip");
+
+            if (buttonTransform != null) 
+            {
+                pressButton(buttonTransform);
+                Debug.Log("Welcome Panel");
+            }
         }
         else if (mainMenu != null && mainMenu.Tpanal != null && mainMenu.Tpanal.activeSelf)
         {
-            ShowVideoPanel();
+            //ShowVideoPanel();
+            Transform buttonTransform = mainMenu.Tpanal.transform.Find("Button_Skip (1)");
+
+            if (buttonTransform != null)
+            {
+                pressButton(buttonTransform);
+                Debug.Log("T Panel");
+            }
         }
         else if (ScreenPanel != null && ScreenPanel.activeSelf)
         {
-            ScreenPanelShow();
+            //ScreenPanelShow();
+            Transform buttonTransform = ScreenPanel.transform.Find("Button_Start");
+
+            if (buttonTransform != null)
+            {
+                pressButton(buttonTransform);
+                Debug.Log("Screen Panel");
+            }
         }
         else
         {
             Debug.Log("MenuNext pressed, but no known active panel state matched.");
+        }
+    }
+
+    public void pressButton(Transform buttonTransform)
+    {
+        // Get the Button component
+        UnityEngine.UI.Button button = buttonTransform.GetComponent<UnityEngine.UI.Button>();
+
+        if (button != null)
+        {
+            // Simulate button press
+            button.onClick.Invoke();
+            Debug.Log("Button_Claim pressed successfully");
+        }
+        else
+        {
+            Debug.LogError("Button component not found on Button_Claim object");
         }
     }
 
@@ -340,7 +381,6 @@ public class GameControllerManager : MonoBehaviour
     public void HandlePopupConfirm()
     {
         Debug.Log("HandlePopupConfirm");
-
         // Get the levelCompletePanel GameObject
         GameObject levelCompletePanel = ScoreManager.instance.levelCompletePanel;
         GameObject deadPanel = ScoreManager.instance.deadPanel;
