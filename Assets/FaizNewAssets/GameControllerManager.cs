@@ -207,6 +207,7 @@ public class GameControllerManager : MonoBehaviour
             {
                 Debug.Log("DroneMovement script found and assigned.");
                 EnableDroneInputProcessing();
+                menuNextAction.Disable();
             }
             else
             {
