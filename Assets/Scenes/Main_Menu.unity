@@ -7913,7 +7913,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7070190825584647867, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
       propertyPath: adIdAndroid
-      value: ca-app-pub-8397648328712036/7409817855
+      value: ca-app-pub-8397648328712036/1245446676
+      objectReference: {fileID: 0}
+    - target: {fileID: 7070190825584647867, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
+      propertyPath: AdLoadedStatus
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7070190825740093736, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
       propertyPath: _adIdIOS
@@ -7929,12 +7933,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7070190825944867739, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
       propertyPath: bannerToShow
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7070190825944867739, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
       propertyPath: banners.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7070190825944867739, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
+      propertyPath: banners.Array.data[0]
+      value: 
+      objectReference: {fileID: 704280959}
+    - target: {fileID: 7070190825944867739, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
+      propertyPath: banners.Array.data[1]
+      value: 
+      objectReference: {fileID: 704280958}
     - target: {fileID: 7070190825944867740, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -8000,6 +8012,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
+--- !u!114 &704280958 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8705378829124513767, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
+  m_PrefabInstance: {fileID: 704280957}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7d5fb7c12b4443687ae7b4e5fe17d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &704280959 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7390984858838554559, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
+  m_PrefabInstance: {fileID: 704280957}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7d5fb7c12b4443687ae7b4e5fe17d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &761465378
 GameObject:
   m_ObjectHideFlags: 0
@@ -14100,15 +14134,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   welcomePanel: {fileID: 2073660707}
-  TutorialPanel: {fileID: 1272829123}
   ScreenPanel: {fileID: 1834140778}
   nextImagesIcon:
   - {fileID: 20006566}
   SelectIcon: {fileID: 21300000, guid: 6086086efe9d3094286f07c9f593a698, type: 3}
   WELCOME_TO_DRONE_LIFE: {fileID: 134750454}
-  mainMenu: {fileID: 454070054}
   inputActions: {fileID: -944628639613478452, guid: ff22ae6b81a3aaf49b4f2c9fd3a0ea88, type: 3}
-  droneMovementScript: {fileID: 0}
+  mainMenu: {fileID: 454070054}
+  findDroneTimeout: 10
 --- !u!4 &1290514408
 Transform:
   m_ObjectHideFlags: 0

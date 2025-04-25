@@ -68,6 +68,11 @@ namespace AL.Monetization.CustomAdmobAds.Scripts
         {
             interstitialAdController.ShowAd(() =>
             {
+                // This callback is executed after the interstitial ad is closed
+                // The function appears to be working correctly as it provides a callback
+                // that will be executed when the interstitial ad is closed
+                // You can add any code here that should run after the ad is dismissed
+                Debug.Log("Interstitial ad closed");
 
             });
         }

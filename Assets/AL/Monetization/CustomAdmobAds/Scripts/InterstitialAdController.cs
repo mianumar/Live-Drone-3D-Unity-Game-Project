@@ -8,7 +8,7 @@ namespace AL.Monetization.CustomAdmobAds.Scripts
     {
         public bool AdLoadedStatus;
         // Start is called before the first frame update
-        public string adIdAndroid = "ca-app-pub-3940256099942544/6300978111";
+        public string adIdAndroid = "ca-app-pub-8397648328712036/1245446676";
         public string _adIdIOS = "ca-app-pub-3940256099942544/2934735716";
         private string _adUnitId;
         private InterstitialAd _interstitialAd;
