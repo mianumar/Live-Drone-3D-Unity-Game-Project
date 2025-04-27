@@ -7919,6 +7919,10 @@ PrefabInstance:
       propertyPath: AdLoadedStatus
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7070190825584647867, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
+      propertyPath: _maxRetryCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7070190825740093736, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
       propertyPath: _adIdIOS
       value: ca-app-pub-8397648328712036~3914672818
@@ -7933,7 +7937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7070190825944867739, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
       propertyPath: bannerToShow
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7070190825944867739, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
       propertyPath: banners.Array.size
@@ -8010,7 +8014,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7070190825944867738, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 704280961}
   m_SourcePrefab: {fileID: 100100000, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
 --- !u!114 &704280958 stripped
 MonoBehaviour:
@@ -8034,6 +8041,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7d5fb7c12b4443687ae7b4e5fe17d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &704280960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7070190825944867738, guid: afa8bbfebcbeb4b5d865899f912a5d2d, type: 3}
+  m_PrefabInstance: {fileID: 704280957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &704280961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704280960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c403d2cdf32cf44a8e5f3cf94c389b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _debugMode: 1
 --- !u!1 &761465378
 GameObject:
   m_ObjectHideFlags: 0
