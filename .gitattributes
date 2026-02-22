@@ -1,7 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-*.psd filter=lfs diff=lfs merge=lfs -text
-*.tif filter=lfs diff=lfs merge=lfs -text
 Assets/Classical_city/Textures/building_a.tif filter=lfs diff=lfs merge=lfs -text
 Assets/Classical_city/Textures/ground.tif filter=lfs diff=lfs merge=lfs -text
 Assets/Classical_city/Textures/props_a.tif filter=lfs diff=lfs merge=lfs -text

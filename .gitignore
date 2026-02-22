@@ -11,11 +11,11 @@
 /[Uu]ser[Ss]ettings/
 
 # Ignore specific .tif files in the Classical_city Textures folder
-/Assets/Classical_city/Textures/ground.tif
-/Assets/Classical_city/Textures/props_b.tif
-/Assets/Classical_city/Textures/building_a.tif
-/Assets/Classical_city/Textures/vegetation_b.tif
-/Assets/Classical_city/Textures/props_a.tif
+#/Assets/Classical_city/Textures/ground.tif
+#/Assets/Classical_city/Textures/props_b.tif
+#/Assets/Classical_city/Textures/building_a.tif
+#/Assets/Classical_city/Textures/vegetation_b.tif
+#/Assets/Classical_city/Textures/props_a.tif
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -79,3 +79,8 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 
+!Assets/Classical_city/Textures/building_a.tif
+!Assets/Classical_city/Textures/ground.tif
+!Assets/Classical_city/Textures/props_a.tif
+!Assets/Classical_city/Textures/props_b.tif
+!Assets/Classical_city/Textures/vegetation_b.tif
