@@ -146,6 +146,10 @@ public class ScoreManager : MonoBehaviour
 
     private void LevelComplete()
     {
+        if (ProgressManager.Instance != null)
+        {
+            ProgressManager.Instance.MarkCurrentSceneLevelComplete();
+        }
         levelCompletePanel.SetActive(true);
         Time.timeScale = 0;
         loadInterAd();

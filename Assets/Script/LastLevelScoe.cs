@@ -155,6 +155,10 @@ public class LastLevelScoe : MonoBehaviour
     private void LevelComplete()
     {
         Time.timeScale = 0;
+        if (ProgressManager.Instance != null)
+        {
+            ProgressManager.Instance.MarkCurrentSceneLevelComplete();
+        }
         Advertisements.Instance.ShowInterstitial();
         levelCompletePanel.SetActive(true);
     }

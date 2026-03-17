@@ -24,7 +24,21 @@ public class MainMenu : MonoBehaviour
     public void startgame()
     {
         // Load Level_8 scene
-        SceneManager.LoadScene("Level_1");
+        //SceneManager.LoadScene("Level_1");
+        ContinueGame();
+    }
+
+    // Hook this to a "Continue" button if you have one.
+    public void ContinueGame()
+    {
+        if (ProgressManager.Instance != null)
+        {
+            SceneManager.LoadScene(ProgressManager.Instance.GetContinueSceneName());
+        }
+        else
+        {
+            SceneManager.LoadScene("Level_1");
+        }
     }
     public void ShowInterstitial()
     {
