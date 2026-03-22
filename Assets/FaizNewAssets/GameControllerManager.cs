@@ -35,6 +35,7 @@ public class GameControllerManager : MonoBehaviour
     // Drone Reference
     private DroneMovement droneMovementScript; // Changed to DroneMovement type
     private bool isDroneInputActive = false; // Flag to control input processing
+    private Coroutine findDroneRoutine;
 
     // Panels Reference
     private const string LEVEL_COMPLETE_TAG = "LevelCompletePopup"; // Tag for Win Panel
@@ -162,12 +163,29 @@ public class GameControllerManager : MonoBehaviour
         else
         {
             // Attempt to find the drone and enable input processing
-            StartCoroutine(FindAndPrepareDrone());
+            if (findDroneRoutine != null)
+                StopCoroutine(findDroneRoutine);
+            findDroneRoutine = StartCoroutine(FindAndPrepareDrone());
         }
+    }
+
+    /// <summary>Call after <see cref="DroneSelectionManager"/> replaces the drone so gamepad input targets the new instance.</summary>
+    public void RebindToSceneDroneAfterSwap()
+    {
+        if (inputActions == null)
+            return;
+        DisableDroneInputProcessing();
+        droneMovementScript = null;
+        if (findDroneRoutine != null)
+            StopCoroutine(findDroneRoutine);
+        findDroneRoutine = StartCoroutine(FindAndPrepareDrone());
     }
 
     IEnumerator FindAndPrepareDrone()
     {
+        // Wait one frame so DroneSelectionManager can replace Drone_Racing after level env spawns.
+        yield return null;
+
         Debug.Log("Attempting to find Drone...");
         droneMovementScript = null; // Reset reference
         float timeWaited = 0f;
@@ -186,11 +204,13 @@ public class GameControllerManager : MonoBehaviour
             //    if (drones.Length > 0) droneObject = drones[0]; // Take the first one found
             // }
 
-            // Option 3: Find object of type DroneMovement (Less specific, might find wrong object)
-            // if (droneObject == null) {
-            //    DroneMovement foundScript = FindObjectOfType<DroneMovement>();
-            //    if (foundScript != null) droneObject = foundScript.gameObject;
-            // }
+            // Option 3: After DroneSelectionManager swap, name stays Drone_Racing; fallback for edge cases
+            if (droneObject == null)
+            {
+                DroneMovement foundScript = FindObjectOfType<DroneMovement>();
+                if (foundScript != null)
+                    droneObject = foundScript.gameObject;
+            }
             // --- End Find method options ---
 
             if (droneObject == null)
@@ -220,6 +240,8 @@ public class GameControllerManager : MonoBehaviour
             Debug.LogError($"Drone GameObject could not be found after {findDroneTimeout} seconds. Disabling drone input.");
             DisableDroneInputProcessing();
         }
+
+        findDroneRoutine = null;
     }
 
     private void EnableDroneInputProcessing()
