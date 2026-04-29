@@ -1,4 +1,5 @@
 using DroneController.CameraMovement;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -56,50 +57,189 @@ public class DroneSelectionManager : MonoBehaviour
         if (!scene.name.StartsWith("Level_"))
             return;
 
-        // Level_* scripts Instantiate the env prefab in Start(), which runs before sceneLoaded fires.
+        // Use a coroutine to wait for the Level script to finish instantiating the environment
+        StartCoroutine(WaitAndSwap());
+    }
+
+    private IEnumerator WaitAndSwap()
+    {
+        // Wait for two frames to ensure the 'Level_1(Clone)' is fully settled in the hierarchy
+        yield return null;
+        yield return new WaitForEndOfFrame();
+
         TrySwapDroneNow();
     }
 
     /// <summary>Replace placeholder with selected prefab. Safe to call from UI for in-level change.</summary>
+    /*    public void TrySwapDroneNow()
+        {
+            var placeholder = GameObject.Find(placeholderObjectName);
+            if (placeholder == null)
+            {
+                Debug.LogWarning($"DroneSelectionManager: No '{placeholderObjectName}' found in scene.");
+                return;
+            }
+
+            if (availableDrones == null || availableDrones.Length == 0)
+                return;
+
+            int index = Mathf.Clamp(PlayerPrefs.GetInt(PlayerPrefsSelectedDroneIndex, 0), 0, availableDrones.Length - 1);
+            var entry = availableDrones[index];
+            if (entry == null || entry.prefab == null)
+            {
+                Debug.LogWarning($"DroneSelectionManager: No prefab at index {index}.");
+                return;
+            }
+
+            var t = placeholder.transform;
+            Transform parent = t.parent;
+            Vector3 pos = t.position;
+            Quaternion rot = t.rotation;
+            Vector3 scale = t.localScale;
+
+            Destroy(placeholder);
+
+            var newDrone = Instantiate(entry.prefab, pos, rot, parent);
+            newDrone.name = placeholderObjectName;
+            newDrone.tag = "Player";
+            newDrone.transform.localScale = scale;
+
+            RewireSceneToDrone(newDrone);
+            var gcm = Object.FindObjectOfType<GameControllerManager>();
+            if (gcm != null)
+                gcm.RebindToSceneDroneAfterSwap();
+            Debug.Log($"DroneSelectionManager: Swapped to '{entry.displayName}' (index {index}).");
+        }
+    */
+    /*
+        public void TrySwapDroneNow()
+        {
+            // 1. Find the placeholder even if it's nested deep inside 'Level_1'
+            GameObject placeholder = null;
+
+            // This finds the object even if it's inactive or a nested child
+            GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+            foreach (GameObject obj in allObjects)
+            {
+                // We check for the name and ensure it's part of the current scene (not a prefab asset)
+                if (obj.name == placeholderObjectName && obj.hideFlags == HideFlags.None)
+                {
+                    placeholder = obj;
+                    break;
+                }
+            }
+
+            if (placeholder == null)
+            {
+                // Fallback: search for clones if Unity renamed it during instantiation
+                placeholder = GameObject.Find(placeholderObjectName + "(Clone)");
+            }
+
+            if (placeholder == null)
+            {
+                Debug.LogWarning($"DroneSelectionManager: Could not find '{placeholderObjectName}' in the hierarchy.");
+                return;
+            }
+
+            // 2. Capture the exact transform data from the child object
+            Transform t = placeholder.transform;
+            Vector3 pos = t.position;
+            Quaternion rot = t.rotation;
+            Transform parent = t.parent; // This keeps it inside the 'Level_1' group
+            Vector3 scale = t.localScale;
+
+            // 3. Destroy the old one and spawn your selection
+            Destroy(placeholder);
+
+            int index = GetSelectedDroneIndex();
+            GameObject newDrone = Instantiate(availableDrones[index].prefab, pos, rot, parent);
+
+            // 4. Clean up naming so other scripts (like GameController) can find it
+            newDrone.name = placeholderObjectName;
+            newDrone.transform.localScale = scale;
+
+            // 5. Re-wire the game systems
+            RewireSceneToDrone(newDrone);
+
+            Debug.Log($"Successfully replaced nested {placeholderObjectName} with selection index {index}");
+        }
+    */
+
     public void TrySwapDroneNow()
     {
-        var placeholder = GameObject.Find(placeholderObjectName);
+        // 1. Aggressive Search: Find the placeholder even if it's nested or part of a (Clone)
+        GameObject placeholder = null;
+
+        // We use FindObjectsOfTypeAll to find the placeholder even if it's deep in the hierarchy
+        GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+        foreach (GameObject obj in allObjects)
+        {
+            // Ensure we only pick the object in the current scene, not the prefab in the Project folder
+            if (obj.name == placeholderObjectName && obj.scene.isLoaded)
+            {
+                placeholder = obj;
+                break;
+            }
+        }
+
+        // Fallback search in case Unity renamed the object during instantiation
         if (placeholder == null)
         {
-            Debug.LogWarning($"DroneSelectionManager: No '{placeholderObjectName}' found in scene.");
+            placeholder = GameObject.Find(placeholderObjectName + "(Clone)");
+        }
+
+        if (placeholder == null)
+        {
+            Debug.LogWarning($"DroneSelectionManager: Still could not find '{placeholderObjectName}' in the hierarchy.");
             return;
         }
 
         if (availableDrones == null || availableDrones.Length == 0)
-            return;
-
-        int index = Mathf.Clamp(PlayerPrefs.GetInt(PlayerPrefsSelectedDroneIndex, 0), 0, availableDrones.Length - 1);
-        var entry = availableDrones[index];
-        if (entry == null || entry.prefab == null)
         {
-            Debug.LogWarning($"DroneSelectionManager: No prefab at index {index}.");
+            Debug.LogError("DroneSelectionManager: No availableDrones prefabs assigned!");
             return;
         }
 
-        var t = placeholder.transform;
-        Transform parent = t.parent;
+        // 2. Get the selection index from PlayerPrefs (Saved in the Menu)
+        int index = Mathf.Clamp(PlayerPrefs.GetInt(PlayerPrefsSelectedDroneIndex, 0), 0, availableDrones.Length - 1);
+        var entry = availableDrones[index];
+
+        if (entry == null || entry.prefab == null)
+        {
+            Debug.LogWarning($"DroneSelectionManager: No prefab assigned at index {index}.");
+            return;
+        }
+
+        // 3. Capture the placeholder's Transform data
+        Transform t = placeholder.transform;
         Vector3 pos = t.position;
         Quaternion rot = t.rotation;
+        Transform parent = t.parent; // This keeps the new drone inside the Level_1(Clone) parent
         Vector3 scale = t.localScale;
 
+        // 4. Destroy the placeholder and Instantiate the chosen drone
         Destroy(placeholder);
 
         var newDrone = Instantiate(entry.prefab, pos, rot, parent);
-        newDrone.name = placeholderObjectName;
+
+        // 5. Setup the new drone instance
+        newDrone.name = placeholderObjectName; // Reset name so other scripts can find it easily
         newDrone.tag = "Player";
         newDrone.transform.localScale = scale;
 
+        // 6. Re-wire the Scene systems to the new drone
         RewireSceneToDrone(newDrone);
+
+        // 7. Re-bind Gamepad Input so it targets the new instance
         var gcm = Object.FindObjectOfType<GameControllerManager>();
         if (gcm != null)
+        {
             gcm.RebindToSceneDroneAfterSwap();
-        Debug.Log($"DroneSelectionManager: Swapped to '{entry.displayName}' (index {index}).");
+        }
+
+        Debug.Log($"DroneSelectionManager: Swapped to '{entry.displayName}' (index {index}) at {pos}.");
     }
+
 
     private static void RewireSceneToDrone(GameObject drone)
     {
