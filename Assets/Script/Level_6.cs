@@ -27,7 +27,9 @@ public class Level_6 : MonoBehaviour
     private void Spawn()
     {
      // nextSpawnTime = Time.time + spawnDelay;
-       Instantiate(EnvPrefab, transform.position, transform.rotation); 
+       Instantiate(EnvPrefab, transform.position, transform.rotation);
+        DroneSelectionManager.Instance.DroneUpdater();
+
     }
 
     // private bool ShouldSpawn()

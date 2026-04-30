@@ -683,6 +683,7 @@ GameObject:
   - component: {fileID: 114477188894637726}
   - component: {fileID: 114198703845218902}
   - component: {fileID: 114002351381595236}
+  - component: {fileID: -6143776668886539910}
   m_Layer: 0
   m_Name: Drone_Racing
   m_TagString: Player
@@ -787,11 +788,11 @@ MonoBehaviour:
     wantedForwardTilt: 15
     wantedSideTilt: 15
     droneSoundAmplifier: 0.7
-  inputEditorSelection: 2
+  inputEditorSelection: 3
   idle: 1
   animatedGameObject: {fileID: 95794569009011956}
-  mobile_turned_on: 0
-  joystick_turned_on: 1
+  mobile_turned_on: 1
+  joystick_turned_on: 0
   mainCamera: {fileID: 0}
   droneObject: {fileID: 4360068208049102}
   velocity: 0.0000036725544
@@ -831,14 +832,14 @@ MonoBehaviour:
   K: 0
   J: 0
   L: 0
-  forward_button_texture: {fileID: 2800000, guid: 3a063799eb1db5c459635bf7c85543fc, type: 3}
-  backward_button_texture: {fileID: 2800000, guid: f193a036931f8b84d9121455308cbbf5, type: 3}
-  leftward_button_texture: {fileID: 2800000, guid: f26b478ec2691b947888f0f85ad48856, type: 3}
-  rightward_button_texture: {fileID: 2800000, guid: 33abb4258b7e88c42ac06113562c670a, type: 3}
-  upwards_button_texture: {fileID: 2800000, guid: d6cf70c4f20e5a141b9350392c61a37f, type: 3}
-  downwards_button_texture: {fileID: 2800000, guid: f3459fa1035c78c4da673ae44a4c47db, type: 3}
-  rotation_left_button_texture: {fileID: 2800000, guid: 5257c6ed835b5fd47882a53f9ac176d5, type: 3}
-  rotation_right_button_texture: {fileID: 2800000, guid: 55c43f86daf45ae43ab9840bc27e32d1, type: 3}
+  forward_button_texture: {fileID: 2800000, guid: 7476e619984041a4198761150e4e764f, type: 3}
+  backward_button_texture: {fileID: 2800000, guid: 7b60659aaf5e5cd4cac15cdfa6a8e7f6, type: 3}
+  leftward_button_texture: {fileID: 2800000, guid: 775735ca014205f408049faa8947433e, type: 3}
+  rightward_button_texture: {fileID: 2800000, guid: 4c80430777fb0ef4a9d987d67bb7dffb, type: 3}
+  upwards_button_texture: {fileID: 2800000, guid: df6f9d15ccc20dc42bf534d7c46c9211, type: 3}
+  downwards_button_texture: {fileID: 2800000, guid: 8175b9ba2745d874987714d8b6c9d49b, type: 3}
+  rotation_left_button_texture: {fileID: 2800000, guid: a7e26901d07ea4544a4d1ffb99e086c0, type: 3}
+  rotation_right_button_texture: {fileID: 2800000, guid: 3d5ceca0fa38a8644829138032f95bde, type: 3}
   forward: 119
   backward: 115
   rightward: 100
@@ -864,6 +865,7 @@ MonoBehaviour:
   customFeed_rotateLeft: 0
   customFeed_rotateRight: 0
   customFeed: 0
+  tiltAmountForward: 0
   Vertical_W: 0
   Vertical_S: 0
   Horizontal_A: 0
@@ -907,6 +909,27 @@ MonoBehaviour:
   elisaAngle: 0
   spinDifference: 1
   atWhatSpeedsShowWingtipVortices: 7.5
+--- !u!65 &-6143776668886539910
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240527568958712}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.5089204, y: 0.87839127, z: 2.1459122}
+  m_Center: {x: -0.005539775, y: -0.060804367, z: 0.13603973}
 --- !u!1 &1294454659889492
 GameObject:
   m_ObjectHideFlags: 0

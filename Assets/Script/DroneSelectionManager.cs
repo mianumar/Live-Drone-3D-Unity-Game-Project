@@ -35,12 +35,14 @@ public class DroneSelectionManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            Debug.Log("Hello Mr. I'm working!");
+            //SceneManager.sceneLoaded += OnSceneLoaded;
         }
-        else if (Instance != this)
+
+/*        else if (Instance != this)
         {
             Destroy(gameObject);
-        }
+        }*/
     }
 
     private void OnDestroy()
@@ -58,6 +60,11 @@ public class DroneSelectionManager : MonoBehaviour
             return;
 
         // Use a coroutine to wait for the Level script to finish instantiating the environment
+        StartCoroutine(WaitAndSwap());
+    }
+
+    public void DroneUpdater()
+    {
         StartCoroutine(WaitAndSwap());
     }
 
