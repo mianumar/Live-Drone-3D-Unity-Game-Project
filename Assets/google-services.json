@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "830404151421",
+    "project_id": "drone-life-so-lets-fly",
+    "storage_bucket": "drone-life-so-lets-fly.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830404151421:android:66784d4db4714c83590914",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.Dronelife"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOZJlPUb1uarMp6Au_cwiUuPDtD-tdJhk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
