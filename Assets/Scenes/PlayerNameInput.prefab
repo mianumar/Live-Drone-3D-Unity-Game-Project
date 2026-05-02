@@ -313,7 +313,7 @@ RectTransform:
   m_GameObject: {fileID: 1451819592723237318}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.01062, y: 5.01062, z: 5.01062}
+  m_LocalScale: {x: 6.7415586, y: 6.1991334, z: 6.1991334}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2784392132363084371}
@@ -406,7 +406,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8816055166442110335}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2586746336262913917}
+        m_TargetAssemblyTypeName: NameInputUI, Assembly-CSharp
+        m_MethodName: OnSubmit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4793683829710676892
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,6 +791,7 @@ GameObject:
   - component: {fileID: 8820467194026055321}
   - component: {fileID: 6301659273430719154}
   - component: {fileID: 465291847589383729}
+  - component: {fileID: 2586746336262913917}
   m_Layer: 5
   m_Name: PlayerNameInput
   m_TagString: Untagged
@@ -846,6 +859,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2586746336262913917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6706660585714740151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a3bd001a41bde4eb8d4e4484f63aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 6706660585714740151}
+  inputField: {fileID: 3288680959448845547}
 --- !u!1 &7763590848119389805
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +907,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -26.40001, y: 1.26}
+  m_AnchoredPosition: {x: -2, y: 1.26}
   m_SizeDelta: {x: 94.46286, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6438442476443921985
@@ -911,7 +938,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next
+  m_text: Submit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d70f485aa27dc43f79a8fd168f58435c, type: 2}
   m_sharedMaterial: {fileID: 5416806443266638455, guid: d70f485aa27dc43f79a8fd168f58435c, type: 2}
@@ -974,7 +1001,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -42.483063, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

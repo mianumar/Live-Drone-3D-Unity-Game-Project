@@ -35,13 +35,39 @@ public class FirebaseHighScoreManager : MonoBehaviour
         });
     }
 
-    public void UpdateHighScore(string userId, int score)
+    public void UpdateHighScore(int score)
     {
         if (dbReference == null) return;
 
-        // Path: HighScores / UserID / Score
-        dbReference.Child("HighScores").Child(userId).SetValueAsync(score).ContinueWithOnMainThread(task => {
-            if (task.IsCompleted) Debug.Log("Score updated in Firebase!");
+        string userId = PlayerData.Instance.userId;
+
+        DatabaseReference userRef = dbReference.Child("HighScores").Child(userId);
+
+        userRef.GetValueAsync().ContinueWithOnMainThread(task =>
+        {
+            if (task.IsCompleted)
+            {
+                int oldScore = 0;
+
+                if (task.Result.Exists && task.Result.Child("score").Value != null)
+                {
+                    int.TryParse(task.Result.Child("score").Value.ToString(), out oldScore);
+                }
+
+                if (score > oldScore)
+                {
+                    var data = new
+                    {
+                        id = userId,
+                        name = PlayerData.Instance.playerName,
+                        score = score
+                    };
+
+                    string json = JsonUtility.ToJson(data);
+
+                    userRef.SetRawJsonValueAsync(json);
+                }
+            }
         });
     }
 }*/
