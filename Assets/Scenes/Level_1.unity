@@ -540,6 +540,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScoreboardPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 4461658713908178566, guid: b45ff8401d08ac44bb771ea35984a615, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
