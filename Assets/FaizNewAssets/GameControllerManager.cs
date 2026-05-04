@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using DroneController.Physics; // Ensure this namespace is correct
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -14,6 +14,7 @@ public class GameControllerManager : MonoBehaviour
     public GameObject welcomePanel;
     // public GameObject TutorialPanel; // Reference might be in MainMenu now?
     public GameObject ScreenPanel;
+    public GameObject InputPanel;
     public Image[] nextImagesIcon; // For controller icon indication
     public Sprite SelectIcon;      // Icon to show when controller detected
 
@@ -352,6 +353,17 @@ public class GameControllerManager : MonoBehaviour
                 Debug.Log("Welcome Panel");
             }
         }
+       /* else if (mainMenu != null && mainMenu.inputpanel != null && mainMenu.inputpanel.activeSelf)
+        {
+            //ShowInputPanel();
+            Transform buttonTransform = mainMenu.inputpanel.transform.Find("Button_Submit");
+
+            if (buttonTransform != null)
+            {
+                pressButton(buttonTransform);
+                Debug.Log("Input Panel");
+            }
+        }*/
         else if (mainMenu != null && mainMenu.Tpanal != null && mainMenu.Tpanal.activeSelf)
         {
             //ShowVideoPanel();

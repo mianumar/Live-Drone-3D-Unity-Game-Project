@@ -7,7 +7,7 @@ using AL.Monetization.CustomAdmobAds.Scripts;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject Video,Tpanal;
+    public GameObject Video,Tpanal,inputpanel;
 
     void Start()
     {
@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
 
     public void getStart()
     {
+        //inputpanel.SetActive(false);
         Video.SetActive(true);
         Tpanal.SetActive(false);
     }
