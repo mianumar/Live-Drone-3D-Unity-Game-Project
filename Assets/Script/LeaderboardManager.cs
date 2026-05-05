@@ -1,4 +1,4 @@
-/*using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Firebase.Database;
 using Firebase.Extensions;
 using UnityEngine;
@@ -12,21 +12,30 @@ public class LeaderboardManager : MonoBehaviour
 
     public void Load()
     {
+        Debug.Log("Fetching leaderboard...");
+
         FirebaseDatabase.DefaultInstance.GetReference("HighScores")
         .GetValueAsync().ContinueWithOnMainThread(task =>
         {
-            scores.Clear();
-
-            foreach (var child in task.Result.Children)
+            if (task.IsCompleted)
             {
-                string json = child.GetRawJsonValue();
-                ScoreData data = JsonUtility.FromJson<ScoreData>(json);
-                scores.Add(data);
+                Debug.Log("Firebase Data Received");
+
+                if (!task.Result.Exists)
+                {
+                    Debug.Log("❌ No data in Firebase!");
+                    return;
+                }
+
+                foreach (var child in task.Result.Children)
+                {
+                    Debug.Log(child.GetRawJsonValue());
+                }
             }
-
-            scores.Sort((a, b) => b.score.CompareTo(a.score));
-
-            Display();
+            else
+            {
+                Debug.LogError("❌ Firebase Fetch Failed");
+            }
         });
     }
 
@@ -61,6 +70,7 @@ public class LeaderboardManager : MonoBehaviour
     {
         GameObject obj = Instantiate(rowPrefab, content);
         obj.GetComponent<LeaderboardRow>().Set(rank, data.name, data.score, highlight);
+        Debug.Log($"Creating Row: {data.name} - {data.score}");
     }
 }
 
@@ -70,4 +80,4 @@ public class ScoreData
     public string id;
     public string name;
     public int score;
-}*/
+}
