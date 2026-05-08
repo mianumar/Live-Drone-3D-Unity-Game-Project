@@ -7,6 +7,10 @@ public class PlayerData : MonoBehaviour
     public string playerName;
     public string userId;
 
+
+    [Space(30)]
+    public bool TempBonusLevelTestOn = false;
+
     void Awake()
     {
         if (Instance == null)
@@ -27,6 +31,10 @@ public class PlayerData : MonoBehaviour
         {
             userId = SystemInfo.deviceUniqueIdentifier;
             PlayerPrefs.SetString("USER_ID", userId);
+        }
+
+        if (TempBonusLevelTestOn) {
+            PlayerPrefs.SetInt("UnlockedLevel", 8);
         }
     }
 
