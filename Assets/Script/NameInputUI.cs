@@ -52,6 +52,6 @@ public class NameInputUI : MonoBehaviour
         panel.SetActive(false);
         Time.timeScale = 1f;
 
-        FindObjectOfType<GameControllerManager>().ShowTutorialPanel();
+        //FindObjectOfType<GameControllerManager>().ShowTutorialPanel();
     }
 }
