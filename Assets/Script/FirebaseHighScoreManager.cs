@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using Firebase;
 using Firebase.Database;
 using Firebase.Extensions;
@@ -70,4 +70,4 @@ public class FirebaseHighScoreManager : MonoBehaviour
             }
         });
     }
-}
+}*/

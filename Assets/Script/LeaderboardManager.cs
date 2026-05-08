@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿/*using System.Collections.Generic;
 using Firebase.Database;
 using Firebase.Extensions;
 using UnityEngine;
@@ -80,4 +80,4 @@ public class ScoreData
     public string id;
     public string name;
     public int score;
-}
+}*/

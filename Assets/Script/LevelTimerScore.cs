@@ -48,8 +48,8 @@ public class LevelTimerScore : MonoBehaviour
             finalScoreText.text = "Final Score: " + finalScore.ToString("0");
         }
         // 🔥 SEND SCORE TO FIREBASE
-        FirebaseHighScoreManager.Instance.UpdateHighScore((int)finalScore);
-        FindObjectOfType<LeaderboardManager>().Load();
+        //FirebaseHighScoreManager.Instance.UpdateHighScore((int)finalScore);
+        //FindObjectOfType<LeaderboardManager>().Load();
         Debug.Log("Leaderboard Load Called");
     }
 }
