@@ -14,13 +14,14 @@ public class NameInputUI : MonoBehaviour
     {
         Instance = this;
 
-        panel.SetActive(false);
+        CheckAndShowPopup();
 
         // 🔥 Listen to input changes
         inputField.onValueChanged.AddListener(OnNameChanged);
 
         // Initially disable button
         submitButton.interactable = false;
+
     }
 
     public void Show()
@@ -32,12 +33,27 @@ public class NameInputUI : MonoBehaviour
         submitButton.interactable = false;
     }
 
+    private void CheckAndShowPopup()
+    {
+        string savedName = PlayerPrefs.GetString("UserName", "");
+
+        if (string.IsNullOrEmpty(savedName))
+        {
+            Show();
+        }
+        else
+        {
+            panel.SetActive(false);
+            Time.timeScale = 1f;
+        }
+    }
+
     void OnNameChanged(string value)
     {
         // Trim spaces and validate
         string trimmed = value.Trim();
 
-        // Enable only if valid
+        // Validation: length check and no spaces
         submitButton.interactable = trimmed.Length >= 3 && !trimmed.Contains(" ");
     }
 
@@ -45,9 +61,12 @@ public class NameInputUI : MonoBehaviour
     {
         string name = inputField.text.Trim();
 
-        if (name.Length < 2) return;
+        if (name.Length < 3) return;
 
-        PlayerData.Instance.SaveName(name);
+        if (PlayerData.Instance != null)
+        {
+            PlayerData.Instance.SaveName(name);
+        }
 
         panel.SetActive(false);
         Time.timeScale = 1f;
