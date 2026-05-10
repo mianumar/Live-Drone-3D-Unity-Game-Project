@@ -163,6 +163,20 @@ public class ScoreManager : MonoBehaviour
         loadInterAd();
     }
 
+    public void LoadNextLevel()
+    {
+        if (ProgressManager.Instance != null)
+        {
+            string nextScene = ProgressManager.Instance.GetContinueSceneName();
+            SceneManager.LoadScene(nextScene);
+        }
+        else
+        {
+            // Fallback if ProgressManager is missing
+            SceneManager.LoadScene("Main_Menu");
+        }
+    }
+
     public void loadInterAd()
     {
         if (!isAdShown)
@@ -173,77 +187,86 @@ public class ScoreManager : MonoBehaviour
     }
     public void level1()
     {
-        SceneManager.LoadScene("Level_1");
+        //SceneManager.LoadScene("Level_1");
+        LoadNextLevel();
     }
     public void level2()
     {
-        SceneManager.LoadScene("Level_2");
+        //SceneManager.LoadScene("Level_2");
+        LoadNextLevel();
     }
     public void level3()
     {
-        SceneManager.LoadScene("Level_3");
+        LoadNextLevel();
+        //SceneManager.LoadScene("Level_3");
     }
     public void level4()
     {
-        SceneManager.LoadScene("Level_4");
+        LoadNextLevel();
+        //SceneManager.LoadScene("Level_4");
     }
     public void MainMenu()
     {
-        SceneManager.LoadScene("Main_Menu");
+        LoadNextLevel();
     }
      public void level5()
     {
-        SceneManager.LoadScene("Level_5");
+        LoadNextLevel();
     }
      public void level6()
     {
-        SceneManager.LoadScene("Level_6");
+        LoadNextLevel();
     }
      public void level7()
     {
-        SceneManager.LoadScene("Level_7");
+        LoadNextLevel();
     }
      public void level8()
     {
-        SceneManager.LoadScene("Level_8");
+        LoadNextLevel();
     }
     public void level9()
     {
-        SceneManager.LoadScene("Level_9");
+        LoadNextLevel();
     }
     public void level10()
     {
-        SceneManager.LoadScene("Level_10");
+        LoadNextLevel();
     }
 
     public void level11()
-    {
-        SceneManager.LoadScene("Level_11");
+    {   
+        LoadNextLevel();
     }
 
     public void level12()
     {
-        SceneManager.LoadScene("Level_12");
+        LoadNextLevel();
     }
 
     public void level13()
     {
-        SceneManager.LoadScene("Level_13");
+        LoadNextLevel();
     }
 
     public void level14()
     {
-        SceneManager.LoadScene("Level_14");
+        LoadNextLevel();
     }
 
     public void level15()
     {
-        SceneManager.LoadScene("Level_15");
+        LoadNextLevel();
     }
 
     public void level16()
     {
-        SceneManager.LoadScene("Level_16");
+        LoadNextLevel();
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
