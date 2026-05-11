@@ -778,6 +778,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 450641716832273086, guid: 9869eb11c141b5e45af2811b3c13df74, type: 3}
   m_PrefabInstance: {fileID: 1565225751}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &165738760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114009229925941480, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
+  m_PrefabInstance: {fileID: 930472631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3162d07f0cdb6be4c9e9c82e04bbde9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &165738761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
+  m_PrefabInstance: {fileID: 930472631}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c595e8924448bfe48b871a8c7009fa5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &193827045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -786,6 +808,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 581830769}
     m_Modifications:
+    - target: {fileID: 8150759727498139823, guid: ef51c1bbfdd9bbf4dbc61b7f965ea148, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 454070053}
+    - target: {fileID: 8150759727498139823, guid: ef51c1bbfdd9bbf4dbc61b7f965ea148, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: level10
+      objectReference: {fileID: 0}
     - target: {fileID: 8150759727500380887, guid: ef51c1bbfdd9bbf4dbc61b7f965ea148, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.81036
@@ -2134,6 +2164,7 @@ GameObject:
   - component: {fileID: 454070051}
   - component: {fileID: 454070050}
   - component: {fileID: 454070049}
+  - component: {fileID: 454070053}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2227,6 +2258,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &454070053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454070046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a3bba69e9d86e41857038697e8e8b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  scoreSlider: {fileID: 0}
+  healthSlider: {fileID: 0}
+  levelCompletePanel: {fileID: 0}
+  deadPanel: {fileID: 0}
+  hearts: []
+  livesPopupText: {fileID: 0}
+  droneMovement: {fileID: 165738761}
+  DronePropelers: {fileID: 165738760}
+  maxScore: 100
+  playerHealth: 100
+  maxHealth: 100
+  healthDecreaseRate: 5
 --- !u!1 &468534318 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 450641716832273086, guid: 9869eb11c141b5e45af2811b3c13df74, type: 3}
@@ -2768,7 +2824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &581830769
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4636,7 +4692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: _profileIndex
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: forceDownHover
@@ -4644,19 +4700,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: rotationAmount
-      value: 3
+      value: 1.875
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: wantedSideTilt
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: maxForwardSpeed
-      value: 14
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: maxSidewaySpeed
-      value: 9
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: mobile_turned_on
@@ -4664,7 +4720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: wantedForwardTilt
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: joystick_turned_on
@@ -4672,15 +4728,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: sideMovementAmount
-      value: 450
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: droneSoundAmplifier
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: tiltNoMovementSpeed
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: inputEditorSelection
@@ -4688,7 +4744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: movementForwardSpeed
-      value: 750
+      value: 375
       objectReference: {fileID: 0}
     - target: {fileID: 114836510984998004, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: profiles.Array.data[0].forceUpHover
@@ -9154,6 +9210,7 @@ GameObject:
   - component: {fileID: 1866969053}
   - component: {fileID: 1866969052}
   - component: {fileID: 1866969055}
+  - component: {fileID: 1866969056}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -9276,6 +9333,22 @@ MonoBehaviour:
   canvasSelectButtons: []
   canvasExitButtons: []
   canvasTimeTrack: {fileID: 0}
+--- !u!114 &1866969056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866969051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b492e2f2fb3ed14c9f6b50555287ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: EDITOR SCRIPT. THIS SCRIPT IS USED TO DETERMINE HOW MANY DRONES ARE
+    THERE ON THE SCENE, AND IF THERE IS MORE THAN 1 DRONE IT WILL ACTIVATE THE 'PICK
+    MENU' AUTOMATICALLY.
+  cs: {fileID: 1866969055}
 --- !u!1 &1883180632
 GameObject:
   m_ObjectHideFlags: 0
