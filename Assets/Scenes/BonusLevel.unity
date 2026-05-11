@@ -814,7 +814,7 @@ PrefabInstance:
       objectReference: {fileID: 454070053}
     - target: {fileID: 8150759727498139823, guid: ef51c1bbfdd9bbf4dbc61b7f965ea148, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: level10
+      value: LoadNextLevel
       objectReference: {fileID: 0}
     - target: {fileID: 8150759727500380887, guid: ef51c1bbfdd9bbf4dbc61b7f965ea148, type: 3}
       propertyPath: m_LocalScale.x
@@ -2824,7 +2824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &581830769
 RectTransform:
   m_ObjectHideFlags: 0

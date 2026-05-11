@@ -34,7 +34,11 @@ public class PlayerData : MonoBehaviour
         }
 
         if (TempBonusLevelTestOn) {
-            PlayerPrefs.SetInt("UnlockedLevel", 8);
+            if (!PlayerPrefs.HasKey("UnlockedLevel"))
+            {
+                PlayerPrefs.SetInt("UnlockedLevel", 8);
+                PlayerPrefs.Save();
+            }
         }
     }
 
