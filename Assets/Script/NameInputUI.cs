@@ -66,6 +66,11 @@ public class NameInputUI : MonoBehaviour
         if (PlayerData.Instance != null)
         {
             PlayerData.Instance.SaveName(name);
+
+            if (SQLHighScoreManager.Instance != null)
+            {
+                SQLHighScoreManager.Instance.UpdateHighScore(0);
+            }
         }
 
         panel.SetActive(false);

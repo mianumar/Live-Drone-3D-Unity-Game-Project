@@ -62,6 +62,11 @@ public class BonusLevel : MonoBehaviour
 
     private void CompleteLevel()
     {
+
+        PlayerPrefs.SetInt("UnlockedLevel", 10);
+        PlayerPrefs.Save();
+        Debug.Log($"Progress saved. Unlocked level is now: Index : {10}");
+
         if (levelCompletePanel != null)
         {
             levelCompletePanel.SetActive(true);

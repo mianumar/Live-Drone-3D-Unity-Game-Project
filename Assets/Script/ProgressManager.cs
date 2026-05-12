@@ -61,6 +61,7 @@ public sealed class ProgressManager : MonoBehaviour
     public void MarkCurrentSceneLevelComplete()
     {
         string sceneName = SceneManager.GetActiveScene().name;
+        Debug.Log("Level Completed == " +  sceneName);
         int completedIndex;
 
         // Special check for BonusLevel

@@ -150,6 +150,13 @@ public class ScoreManager : MonoBehaviour
         {
             ProgressManager.Instance.MarkCurrentSceneLevelComplete();
         }
+
+        // Send the current score to your website's SQL database
+        if (SQLHighScoreManager.Instance != null)
+        {
+            SQLHighScoreManager.Instance.UpdateHighScore(score);
+        }
+
         levelCompletePanel.SetActive(true);
         Time.timeScale = 0;
         loadInterAd();
