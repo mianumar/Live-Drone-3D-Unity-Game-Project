@@ -17,7 +17,12 @@ public class LeaderboardRow : MonoBehaviour
 
         if (highlight)
         {
+            nameText.text = name + " (You)";
             bg.color = Color.yellow;
+
+            rankText.color = Color.black;
+            nameText.color = Color.black;
+            scoreText.color = Color.black;
         }
     }
 }
