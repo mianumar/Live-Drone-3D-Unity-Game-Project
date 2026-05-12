@@ -7,6 +7,7 @@ public class NameInputUI : MonoBehaviour
     public static NameInputUI Instance;
 
     public GameObject panel;
+    public GameObject TutorialPanel;
     public TMP_InputField inputField;
     public Button submitButton;
 
@@ -47,6 +48,7 @@ public class NameInputUI : MonoBehaviour
         else
         {
             panel.SetActive(false);
+            TutorialPanel.SetActive(true);
             Time.timeScale = 1f;
         }
     }

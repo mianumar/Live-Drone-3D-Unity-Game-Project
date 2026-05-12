@@ -23439,6 +23439,10 @@ PrefabInstance:
       propertyPath: submitButton
       value: 
       objectReference: {fileID: 265108952}
+    - target: {fileID: 2586746336262913917, guid: 1a955da12d1928b4394d1e6b10680e94, type: 3}
+      propertyPath: TutorialPanel
+      value: 
+      objectReference: {fileID: 1272829123}
     - target: {fileID: 2712516462900651543, guid: 1a955da12d1928b4394d1e6b10680e94, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5101576
