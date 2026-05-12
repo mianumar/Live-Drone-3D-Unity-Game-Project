@@ -14,14 +14,17 @@ public class NameInputUI : MonoBehaviour
     {
         Instance = this;
 
-        CheckAndShowPopup();
-
         // 🔥 Listen to input changes
         inputField.onValueChanged.AddListener(OnNameChanged);
 
         // Initially disable button
         submitButton.interactable = false;
 
+    }
+    private void Start()
+    {
+
+        CheckAndShowPopup();
     }
 
     public void Show()
@@ -35,7 +38,7 @@ public class NameInputUI : MonoBehaviour
 
     private void CheckAndShowPopup()
     {
-        string savedName = PlayerPrefs.GetString("UserName", "");
+        string savedName = PlayerPrefs.GetString("PLAYER_NAME", "");
 
         if (string.IsNullOrEmpty(savedName))
         {
