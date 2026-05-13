@@ -45,6 +45,11 @@ public class BonusLevel : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            if (ProgressManager.Instance != null)
+            {
+                ProgressManager.Instance.MarkCurrentSceneLevelComplete();
+            }
+
             Debug.Log("Player tag confirmed!");
 
             if (levelCompletePanel != null)

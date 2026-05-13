@@ -175,6 +175,8 @@ public class ScoreManager : MonoBehaviour
         if (ProgressManager.Instance != null)
         {
             string nextScene = ProgressManager.Instance.GetContinueSceneName();
+            int currentUnlocked = PlayerPrefs.GetInt("UnlockedLevel");
+            Debug.Log($"[DEBUG] Unlocked Level: {currentUnlocked} | Loading Scene: {nextScene}");
             SceneManager.LoadScene(nextScene);
         }
         else
