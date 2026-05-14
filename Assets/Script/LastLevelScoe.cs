@@ -159,6 +159,11 @@ public class LastLevelScoe : MonoBehaviour
         {
             ProgressManager.Instance.MarkCurrentSceneLevelComplete();
         }
+        if (PlayerData.Instance != null)
+        {
+            PlayerData.Instance.AddToTotalScore(score, lives);
+        }
+
         Advertisements.Instance.ShowInterstitial();
         levelCompletePanel.SetActive(true);
     }
