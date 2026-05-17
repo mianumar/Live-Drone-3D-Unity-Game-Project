@@ -283,4 +283,15 @@ public class ScoreManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void LevelsAccomplished()
+    {
+        if (ProgressManager.Instance != null)
+        {
+            PlayerPrefs.SetInt("UnlockedLevel",1);
+            int currentUnlocked = PlayerPrefs.GetInt("UnlockedLevel");
+            Debug.Log($"[DEBUG] Unlocked Level: {currentUnlocked} | Loading Scene: MainMenuLevelsAccomplished");
+            SceneManager.LoadScene("Main_Menu");
+        }
+    }
+
 }

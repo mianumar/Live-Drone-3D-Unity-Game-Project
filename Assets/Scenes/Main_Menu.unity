@@ -23097,7 +23097,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: 
   userId: 
-  TempBonusLevelTestOn: 1
+  totalScore: 0
+  TempBonusLevelTestOn: 0
 --- !u!4 &1483699836
 Transform:
   m_ObjectHideFlags: 0

@@ -59,14 +59,14 @@ public class NameInputUI : MonoBehaviour
         string trimmed = value.Trim();
 
         // Validation: length check and no spaces
-        submitButton.interactable = trimmed.Length >= 3 && !trimmed.Contains(" ");
+        submitButton.interactable = trimmed.Length >= 3;//&& !trimmed.Contains(" ");
     }
 
     public void OnSubmit()
     {
         string name = inputField.text.Trim();
 
-        if (name.Length < 3) return;
+        if (name.Length <= 3) return;
 
         if (PlayerData.Instance != null)
         {
