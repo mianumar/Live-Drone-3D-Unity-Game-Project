@@ -18,6 +18,7 @@ public class CoinCollect : MonoBehaviour
 
             if (BonusLevel.instance != null)
             {
+                ScoreManager.instance.AddScoreBonus(coinValue);
                 BonusLevel.instance.ShowPlus10();
             }
 

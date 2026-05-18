@@ -1,6 +1,7 @@
-using UnityEngine;
-using TMPro;
 using System.Collections;
+using TMPro;
+using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class BonusLevel : MonoBehaviour
 {
@@ -54,6 +55,8 @@ public class BonusLevel : MonoBehaviour
 
             if (levelCompletePanel != null)
             {
+                int score = ScoreManager.instance.score;
+                PlayerData.Instance.AddToTotalScore(score, 1);
                 levelCompletePanel.SetActive(true);
                 Time.timeScale = 0f;
                 Debug.Log("Panel should be visible now.");
@@ -71,6 +74,7 @@ public class BonusLevel : MonoBehaviour
         PlayerPrefs.SetInt("UnlockedLevel", 10);
         PlayerPrefs.Save();
         Debug.Log($"Progress saved. Unlocked level is now: Index : {10}");
+
 
         if (levelCompletePanel != null)
         {

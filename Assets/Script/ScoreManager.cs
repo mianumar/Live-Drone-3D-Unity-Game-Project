@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
     public Text livesPopupText; // Popup text for remaining lives
     public DroneMovement droneMovement; // Reference to the DroneMovement script
     public DronePropelers DronePropelers; // Reference to the DronePropelers script
-    private int score = 0;
+    public int score = 0;
     public int maxScore = 100; 
     public float playerHealth = 100f; 
     public float maxHealth = 100f; 
@@ -69,6 +69,13 @@ public class ScoreManager : MonoBehaviour
         {
             LevelComplete();
         }
+    }
+
+    public void AddScoreBonus(int value)
+    {
+        score += value;
+        UpdateScoreText();
+        UpdateScoreSlider();
     }
 
     private void UpdateScoreText()
