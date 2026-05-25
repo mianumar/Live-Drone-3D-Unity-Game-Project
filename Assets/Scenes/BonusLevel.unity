@@ -2361,6 +2361,7 @@ MonoBehaviour:
   livesPopupText: {fileID: 43586352}
   droneMovement: {fileID: 165738761}
   DronePropelers: {fileID: 165738760}
+  score: 0
   maxScore: 100
   playerHealth: 1000
   maxHealth: 1000
@@ -4865,7 +4866,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 165110, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: m_Name
-      value: Drone_white
+      value: Drone_Racing
       objectReference: {fileID: 0}
     - target: {fileID: 428200, guid: 6e95cc9cf1feb48dd9b21917782302a8, type: 3}
       propertyPath: m_LocalPosition.x
